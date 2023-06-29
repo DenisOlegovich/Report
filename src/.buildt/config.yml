@@ -1,0 +1,10 @@
+name: src
+id: f5c412cc-07ab-4562-b3d5-da1e46f07878
+languages:
+  - TypeScript
+  - TSX
+extensions:
+  - .ts
+  - .cts
+  - .mts
+  - .tsx

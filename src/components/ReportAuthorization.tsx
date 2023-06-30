@@ -14,7 +14,7 @@ function ReportAuthorization() {
                 <Box>
 Полная статистика Ваших поездок на общественном транспорте г. Москвы по транспортной карте «Тройка»</Box></Box>
             <Box><Menu>
-  <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
+        <MenuButton as={Button} rightIcon={<ChevronDownIcon />}>
     Your Cats
   </MenuButton>
   <MenuList>

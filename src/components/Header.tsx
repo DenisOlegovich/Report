@@ -1,19 +1,22 @@
 import React from 'react';
-import { Container, Flex, useMediaQuery, Box } from '@chakra-ui/react';
-import { NavLink, Link } from 'react-router-dom';
+import { Container, Flex, useMediaQuery, Box,} from '@chakra-ui/react';
+import LogoMT from './Images/LogoMT';
 
 function Header() {
   const [isSmallerThan800] = useMediaQuery('(max-width: 800px)');
 
   return (
-    <Container p="20px" gap="30px" fontFamily="heading">
+    <Container fontFamily="heading">
       <Flex
-        p="20px"
-        gap="30px"
+        m="0px 20px"
         align-items="center"
-        justifyContent={isSmallerThan800 ? 'center' : 'flex-end'}
+        justifyContent={isSmallerThan800 ? 'center' : 'space-between'}
+        align="center"
+        h="70px"
       >
-        
+        <Flex align="center"
+        ><LogoMT/><Box paddingLeft="10px">Департамент транспорта г. Москвы</Box></Flex>
+        <Box>Карта Тройка № 456 876 778 | Выход</Box>
       </Flex>
     </Container>
   );

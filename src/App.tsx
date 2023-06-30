@@ -5,6 +5,8 @@ import Header from './components/Header';
 import Navbar from './components/Navbar';
 import defaultTheme from '@chakra-ui/theme';
 import { RecoilRoot } from 'recoil';
+import Main from './components/Main';
+import Statistics from './components/Statistics';
 
 
 export const theme = extendBaseTheme({
@@ -25,13 +27,13 @@ function App() {
       <ChakraBaseProvider theme={theme}>
         <Header />
         <Navbar/>
-      Hello world
         <Routes>
-          <Route path="/calendar" element={""} />
+          <Route path="/" element={<Main/>} />
           <Route path="/events" element={""} />
           <Route path="/events/:id" element={""} />
           <Route path="*" element={""} />
         </Routes>
+        <Statistics/>
       </ChakraBaseProvider>
     </RecoilRoot>
     </>

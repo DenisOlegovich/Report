@@ -7,125 +7,60 @@ function Navbar() {
   const [isSmallerThan800] = useMediaQuery('(max-width: 800px)');
 
   return (
-    <Container p="20px" gap="30px" fontFamily="heading">
+    <Container fontFamily="heading">
       <Flex
-        p="20px"
-        gap="30px"
+       
         align-items="center"
         justifyContent={isSmallerThan800 ? 'center' : 'space-between'}
       >
         
           <NavLink
             to="/"
-          >
-            <Button as={motion.div} width= "118px" height="49px" padding= "15px 32px 15px 32px" border-radius="16px 16px 0px 0px" gap="10px" whileHover={{ backgroundColor:"red" }}>Главная</Button>
+          ><Button as={motion.div}  maxW= "118px" height="49px" padding="15px 32px 15px 32px" gap="10px" whileHover={{color:"White", backgroundColor:"Black", }}>Главная</Button>
+            
           </NavLink>
-        
-        
+  
         <NavLink
-            style={({ isActive }) => ({
-              display: 'inline-flex',
-              alignItems: 'center',
-              textDecoration: 'none',
-              border: 'none',
-              color: isActive ? 'black' : '#242424',
-              fontSize: '15px',
-              gap: '5px',
-              
-            })}
+            
             to="/"
           >
-            Метро
+            <Button as={motion.div}  maxW= "108px" height="49px" padding= "15px 32px 15px 32px" gap="10px" whileHover={{color:"White", backgroundColor:"Black", }}>Метро</Button>
           </NavLink>
           <NavLink
-            style={({ isActive }) => ({
-              display: 'inline-flex',
-              alignItems: 'center',
-              textDecoration: 'none',
-              border: 'none',
-              color: isActive ? 'black' : '#242424',
-              fontSize: '15px',
-              gap: '5px',
-              
-            })}
+            
             to="/"
           >
-            Наземный транспорт
+            <Button as={motion.div}  maxW= "206px" height="49px" padding= "15px 32px 15px 32px" gap="10px" whileHover={{color:"White", backgroundColor:"Black", }}>Наземный транспорт</Button>
           </NavLink>
           <NavLink
-            style={({ isActive }) => ({
-              display: 'inline-flex',
-              alignItems: 'center',
-              textDecoration: 'none',
-              border: 'none',
-              color: isActive ? 'black' : '#242424',
-              fontSize: '15px',
-              gap: '5px',
-              
-            })}
+            
             to="/"
           >
-            Пригорожное ЖД
+            <Button as={motion.div}  maxW= "180px" height="49px" padding= "15px 32px 15px 32px" gap="10px" whileHover={{color:"White", backgroundColor:"Black", }}>Пригородное ЖД</Button>
           </NavLink>
           <NavLink
-            style={({ isActive }) => ({
-              display: 'inline-flex',
-              alignItems: 'center',
-              textDecoration: 'none',
-              border: 'none',
-              color: isActive ? 'black' : '#242424',
-              fontSize: '15px',
-              gap: '5px',
-              
-            })}
+            
             to="/"
           >
-            Дороги
+            <Button as={motion.div}  maxW= "114px" height="49px" padding= "15px 32px 15px 32px" gap="10px" whileHover={{color:"White", backgroundColor:"Black", }}>Дороги</Button>
           </NavLink>
           <NavLink
-            style={({ isActive }) => ({
-              display: 'inline-flex',
-              alignItems: 'center',
-              textDecoration: 'none',
-              border: 'none',
-              color: isActive ? 'black' : '#242424',
-              fontSize: '15px',
-              gap: '5px',
-              
-            })}
+            
             to="/"
           >
-            Шеринг
+            <Button as={motion.div}  width= "116px" height="49px" padding= "15px 32px 15px 32px" gap="10px" whileHover={{color:"White", backgroundColor:"Black", }}>Шеринг</Button>
           </NavLink>
           <NavLink
-            style={({ isActive }) => ({
-              display: 'inline-flex',
-              alignItems: 'center',
-              textDecoration: 'none',
-              border: 'none',
-              color: isActive ? 'black' : '#242424',
-              fontSize: '15px',
-              gap: '5px',
-              
-            })}
+            
             to="/"
           >
-            Такси
+            <Button as={motion.div}  width= "102px" height="49px" padding= "15px 32px 15px 32px" gap="10px" whileHover={{color:"White", backgroundColor:"Black", }}>Такси</Button>
           </NavLink>
           <NavLink
-            style={({ isActive }) => ({
-              display: 'inline-flex',
-              alignItems: 'center',
-              textDecoration: 'none',
-              border: 'none',
-              color: isActive ? 'black' : '#242424',
-              fontSize: '15px',
-              gap: '5px',
-              
-            })}
+            
             to="/"
           >
-            Вокзалы
+            <Button as={motion.div}  width= "121px" height="49px" padding= "15px 32px 15px 32px" gap="10px" whileHover={{color:"White", backgroundColor:"Black", }}>Вокзалы</Button>
           </NavLink>
         
       </Flex>

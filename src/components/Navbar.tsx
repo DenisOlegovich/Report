@@ -1,6 +1,7 @@
 import React from 'react';
 import { Container, Flex, useMediaQuery, Box, Button } from '@chakra-ui/react';
 import { NavLink } from 'react-router-dom';
+import { motion } from 'framer-motion'
 
 function Navbar() {
   const [isSmallerThan800] = useMediaQuery('(max-width: 800px)');
@@ -17,7 +18,7 @@ function Navbar() {
           <NavLink
             to="/"
           >
-            <Button width= "118px" height="49px" padding= "15px 32px 15px 32px" border-radius="16px 16px 0px 0px" gap="10px" bg="red">Главная</Button>
+            <Button as={motion.div} width= "118px" height="49px" padding= "15px 32px 15px 32px" border-radius="16px 16px 0px 0px" gap="10px" whileHover={{ backgroundColor:"red" }}>Главная</Button>
           </NavLink>
         
         

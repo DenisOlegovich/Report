@@ -20,7 +20,7 @@ import ApLine from "./Images/ApLine";
 import BclLine from "./Images/BclLine";
 import Number3 from "./Images/Number3";
 import Cards from "./Images/Cards";
-function MM2010() {
+function DD2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
   return (
@@ -29,16 +29,64 @@ function MM2010() {
         с 2010 года
       </Center>
       <Center fontFamily="Unbounded" fontWeight="700" fontSize="44px">
-        МОСКОВСКИЙ МЕТРОПОЛИТЕН
+        ДОРОЖНОЕ ДВИЖЕНИЕ
       </Center>
       <Box mt="30px">
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
           <Flex mb="25px">
-            <Box>СТАЛ</Box>
+            <Box>СТАЛО</Box>
             <Box> </Box>
-            <Box color="#D34040">БЫСТРЕЕ</Box>
+            <Box color="#68AD45">БЫСТРЕЕ</Box>
           </Flex>
         </Center>
+        <Flex
+          mt="30px"
+          justifyContent={isSmallerThan1000 ? "center" : "space-between"}
+          flexWrap="wrap"
+          gap="20px"
+        >
+          <Box
+            w="380px"
+            h="218px"
+            bg="#F9F9F9"
+            borderRadius="16px"
+            boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
+          >
+            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
+              <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
+                55 км/ч
+              </Box>
+              <Box fontFamily="Manrope" fontSize="16px">
+                средняя скорость личного транспорта на основных магистралях
+              </Box>
+            </Box>
+
+            <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
+              Средняя скорость движения выросла на 22% или на 10 км/ч
+            </Box>
+          </Box>
+          <Box
+            w="380px"
+            h="218px"
+            bg="#F9F9F9"
+            borderRadius="16px"
+            boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
+          >
+            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
+              <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
+                53 минуты
+              </Box>
+              <Box fontFamily="Manrope" fontSize="16px">
+                время в пути от МКАД до центра города на городском транспорте
+              </Box>
+            </Box>
+
+            <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
+              <b>6 суток в год</b> экономит пассажир в дороге. Время в пути
+              сократилось на 21%, от МКАД до центра быстрее на 14 минут
+            </Box>
+          </Box>
+        </Flex>
         <Box
           maxW="1180px"
           maxH="175px"
@@ -99,15 +147,16 @@ function MM2010() {
           >
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                107
+                до 30%
               </Box>
               <Box fontFamily="Manrope" fontSize="16px">
-                новых станций метро и МЦК было открыто с 2010 года
+                разгрузятся участки Садового кольца, МКАД, ТТК после полного
+                ввода МСД
               </Box>
             </Box>
 
             <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              <b>1 место</b> в Европе по темпам открытия новых станций
+              Благодаря скоростному диаметру на дорогах станет еще свободнее
             </Box>
           </Box>
           <Box
@@ -119,36 +168,16 @@ function MM2010() {
           >
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                99, 98%
+                для 4,5 млн
               </Box>
               <Box fontFamily="Manrope" fontSize="16px">
-                точность соблюдения графика движения в метро
+                жителей, проживающих в 48 районах, улучшилась транспортная
+                доступность
               </Box>
             </Box>
 
             <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              <b>1 место</b> в мире по точности соблюдения графика движения
-              поездов
-            </Box>
-          </Box>
-          <Box
-            w="380px"
-            h="218px"
-            bg="#F9F9F9"
-            borderRadius="16px"
-            boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-          >
-            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-              <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                на ХХ
-              </Box>
-              <Box fontFamily="Manrope" fontSize="16px">
-                больше поездов выходит на Арбатско-Покровскую линию ежедневно
-              </Box>
-            </Box>
-
-            <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              На линии стало больше поездов, чтобы сократить ваше время ожидания
+              Перемещаться по Москве стало удобнее и быстрее
             </Box>
           </Box>
         </Flex>
@@ -157,14 +186,14 @@ function MM2010() {
       <Box mt="30px">
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
           <Flex mb="25px">
-            <Box color="#D34040">КОМФОРТНЕЕ</Box>
+            <Box color="#68AD45">КОМФОРТНЕЕ</Box>
           </Flex>
         </Center>
         <Box
           maxW="1180px"
           maxH="175px"
           borderRadius="16px"
-          bg="#3C3B3B"
+          bg="#68AD45"
           p="15px"
         >
           <Flex
@@ -179,7 +208,7 @@ function MM2010() {
                 fontWeight="600"
                 fontSize="24px"
               >
-                Новые станции метро - это
+                Мобильное приложение Парковки России
               </Box>
             </Box>
             <Box>
@@ -193,10 +222,9 @@ function MM2010() {
                 h="100%"
                 lineHeight="19.2px"
               >
-                Мы заменили турникеты на всех станциях метро и МЦК, при оплате
-                банковской картой они срабатывают более чем в 2 раза, а по
-                биометрии - в 3 раза быстрее. В скором времени появится
-                возможность оплатить проезд и по СБП.
+                Удобное приложение для парковок «Парковки России», 95%
+                парковочных сессий оплачиваются в нем. Платиновый призер AVA
+                Digital Awards 2022 в номинации «Приложение для информации»
               </Flex>
             </Box>
           </Flex>
@@ -216,15 +244,16 @@ function MM2010() {
           >
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                70%
+                ХХХХ
               </Box>
               <Box fontFamily="Manrope" fontSize="16px">
-                вагонов метро - это новые подвижные составы
+                платных парковочных мест в районах "ХХХ" и "ХХХ"
               </Box>
             </Box>
 
             <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              <b>1 место</b> в Европе по темпам обновления поездов
+              Благодаря платным парковкам растет оборачиваемость парковочных
+              мест и вы можете быстрее найти свободное место
             </Box>
           </Box>
           <Box
@@ -236,15 +265,16 @@ function MM2010() {
           >
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                20%
+                более 10 тыс.
               </Box>
               <Box fontFamily="Manrope" fontSize="16px">
-                современных поездов курсирует на Арбатско-Покровской линии
+                парковочных мест для людей с ограниченными возможностями
               </Box>
             </Box>
 
             <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              На линии используется современный подвижной состав «Москва»
+              Специальные широкие и удобные места, которые составляют не менее
+              10% мест на каждой парковке
             </Box>
           </Box>
           <Box
@@ -256,16 +286,16 @@ function MM2010() {
           >
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                на ХХ%
+                более 80
               </Box>
               <Box fontFamily="Manrope" fontSize="16px">
-                меньше людей в вагонахна Арбатско-Покровской линии
+                перехватывающих парковок обустроено в Москве
               </Box>
             </Box>
 
             <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              Мы выпускаем больше поездов в метро, чтобы поездки были еще
-              комфортнее
+              Водители могут бесплатно припарковаться, если затем совершают не
+              менее двух поездок на метро, МЦК или МЦД
             </Box>
           </Box>
         </Flex>
@@ -274,14 +304,14 @@ function MM2010() {
       <Box mt="30px">
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
           <Flex mb="25px">
-            <Box color="#D34040">БЕЗОПАСНЕЕ</Box>
+            <Box color="#68AD45">БЕЗОПАСНЕЕ</Box>
           </Flex>
         </Center>
         <Box
           maxW="1180px"
           maxH="175px"
           borderRadius="16px"
-          bg="#D34040"
+          bg="#396522"
           p="15px"
         >
           <Flex
@@ -296,7 +326,7 @@ function MM2010() {
                 fontWeight="600"
                 fontSize="24px"
               >
-                Новые станции метро - это
+                Интеллектуальная транспортная система
               </Box>
             </Box>
             <Box>
@@ -310,14 +340,10 @@ function MM2010() {
                 h="100%"
                 lineHeight="19.2px"
               >
-                <UnorderedList w="343.5px">
-                  <ListItem>Новые удобные маршруты</ListItem>
-                  <ListItem>Меньше времени в пути</ListItem>
-                </UnorderedList>
-                <UnorderedList w="343.5px">
-                  <ListItem>Повышение стоимости жилья на 12 %</ListItem>
-                  <ListItem>Больше рабочих мест в районе</ListItem>
-                </UnorderedList>
+                ИТС - это единая система управления дорожным движением, сведения
+                из которой поступают в Ситуационный центр Система объединяет
+                работу городских камер, камер фотовидеофиксации, дорожных
+                детекторов и светофоров
               </Flex>
             </Box>
           </Flex>
@@ -337,16 +363,15 @@ function MM2010() {
           >
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                99%
+                на 34%
               </Box>
               <Box fontFamily="Manrope" fontSize="16px">
-                вентиляционных шахт было модернизировано
+                меньше ДТП в Москве по сравнению с 2010 годом
               </Box>
             </Box>
 
             <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              Благодаря современному оборудованию, воздух в метро обновляется
-              каждые 20 мин
+              2,5 тысяч жизней сохранено с 2010 года
             </Box>
           </Box>
           <Box
@@ -358,35 +383,16 @@ function MM2010() {
           >
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                ХХ км
+                3,8 тыс.
               </Box>
               <Box fontFamily="Manrope" fontSize="16px">
-                рельс заменили в метро с 2010 года
+                камер установлено на дорогах Москвы
               </Box>
             </Box>
 
             <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              После модернизации инфраструктуры в вагонах стало значительно тише
-            </Box>
-          </Box>
-          <Box
-            w="380px"
-            h="218px"
-            bg="#F9F9F9"
-            borderRadius="16px"
-            boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-          >
-            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-              <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                ХХ
-              </Box>
-              <Box fontFamily="Manrope" fontSize="16px">
-                навесов установлено на входах в метро
-              </Box>
-            </Box>
-
-            <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              Они защищают инфраструктуруи пассажиров и от осадков и обледенения
+              Благодаря системе фотовидеофиксации водители становятся
+              ответственнее, а дороги - безопаснее
             </Box>
           </Box>
         </Flex>
@@ -394,4 +400,4 @@ function MM2010() {
     </Container>
   );
 }
-export default MM2010;
+export default DD2010;

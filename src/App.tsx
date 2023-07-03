@@ -20,6 +20,7 @@ export const theme = extendBaseTheme({
     Menu: defaultTheme.components.Menu,
   },
 });
+
 function App() {
   return (
     <>
@@ -28,10 +29,10 @@ function App() {
           <Header />
           <Navbar />
           <Routes>
-            <Route path='/' element={<Main />} />
-            <Route path='/events' element={""} />
-            <Route path='/events/:id' element={""} />
-            <Route path='*' element={""} />
+            <Route path="/" element={<Main />} />
+            <Route path="/events" element={""} />
+            <Route path="/events/:id" element={""} />
+            <Route path="*" element={""} />
           </Routes>
           <Statistics />
         </ChakraBaseProvider>

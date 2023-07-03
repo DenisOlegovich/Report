@@ -20,7 +20,7 @@ import ApLine from "./Images/ApLine";
 import BclLine from "./Images/BclLine";
 import Number3 from "./Images/Number3";
 import Cards from "./Images/Cards";
-function MM2010() {
+function PGD2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
   return (
@@ -29,14 +29,14 @@ function MM2010() {
         с 2010 года
       </Center>
       <Center fontFamily="Unbounded" fontWeight="700" fontSize="44px">
-        МОСКОВСКИЙ МЕТРОПОЛИТЕН
+        ПРИГОРОДНОЕ ЖД
       </Center>
       <Box mt="30px">
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
           <Flex mb="25px">
             <Box>СТАЛ</Box>
             <Box> </Box>
-            <Box color="#D34040">БЫСТРЕЕ</Box>
+            <Box color="#F6A500">БЫСТРЕЕ</Box>
           </Flex>
         </Center>
         <Box
@@ -99,15 +99,16 @@ function MM2010() {
           >
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                107
+                ХХ станций
               </Box>
               <Box fontFamily="Manrope" fontSize="16px">
-                новых станций метро и МЦК было открыто с 2010 года
+                открылось в вашем районе
               </Box>
             </Box>
 
             <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              <b>1 место</b> в Европе по темпам открытия новых станций
+              Время в пути для жителей столицы сократилось до 52%, области - до
+              38%
             </Box>
           </Box>
           <Box
@@ -119,16 +120,16 @@ function MM2010() {
           >
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                99, 98%
+                5-7 минут
               </Box>
               <Box fontFamily="Manrope" fontSize="16px">
-                точность соблюдения графика движения в метро
+                интервал движения поездов в час пик
               </Box>
             </Box>
 
             <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              <b>1 место</b> в мире по точности соблюдения графика движения
-              поездов
+              МЦД-1 и МЦД-2 создали множество новых вариантов маршрутов в Москве
+              и области
             </Box>
           </Box>
           <Box
@@ -140,15 +141,15 @@ function MM2010() {
           >
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                на ХХ
+                на 70%
               </Box>
               <Box fontFamily="Manrope" fontSize="16px">
-                больше поездов выходит на Арбатско-Покровскую линию ежедневно
+                чаще стали ходить поезда на направлениях с открытием МЦД
               </Box>
             </Box>
 
             <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              На линии стало больше поездов, чтобы сократить ваше время ожидания
+              На направлении стало больше поездов, сократились интервал движения
             </Box>
           </Box>
         </Flex>
@@ -157,14 +158,14 @@ function MM2010() {
       <Box mt="30px">
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
           <Flex mb="25px">
-            <Box color="#D34040">КОМФОРТНЕЕ</Box>
+            <Box color="#F6A500">КОМФОРТНЕЕ</Box>
           </Flex>
         </Center>
         <Box
           maxW="1180px"
           maxH="175px"
           borderRadius="16px"
-          bg="#3C3B3B"
+          bg="#F6A500"
           p="15px"
         >
           <Flex
@@ -179,124 +180,7 @@ function MM2010() {
                 fontWeight="600"
                 fontSize="24px"
               >
-                Новые станции метро - это
-              </Box>
-            </Box>
-            <Box>
-              <Flex
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="white"
-                gap="20px"
-                justifyContent="space-between"
-                alignItems="center"
-                h="100%"
-                lineHeight="19.2px"
-              >
-                Мы заменили турникеты на всех станциях метро и МЦК, при оплате
-                банковской картой они срабатывают более чем в 2 раза, а по
-                биометрии - в 3 раза быстрее. В скором времени появится
-                возможность оплатить проезд и по СБП.
-              </Flex>
-            </Box>
-          </Flex>
-        </Box>
-        <Flex
-          mt="30px"
-          justifyContent={isSmallerThan1000 ? "center" : "space-between"}
-          flexWrap="wrap"
-          gap="20px"
-        >
-          <Box
-            w="380px"
-            h="218px"
-            bg="#F9F9F9"
-            borderRadius="16px"
-            boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-          >
-            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-              <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                70%
-              </Box>
-              <Box fontFamily="Manrope" fontSize="16px">
-                вагонов метро - это новые подвижные составы
-              </Box>
-            </Box>
-
-            <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              <b>1 место</b> в Европе по темпам обновления поездов
-            </Box>
-          </Box>
-          <Box
-            w="380px"
-            h="218px"
-            bg="#F9F9F9"
-            borderRadius="16px"
-            boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-          >
-            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-              <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                20%
-              </Box>
-              <Box fontFamily="Manrope" fontSize="16px">
-                современных поездов курсирует на Арбатско-Покровской линии
-              </Box>
-            </Box>
-
-            <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              На линии используется современный подвижной состав «Москва»
-            </Box>
-          </Box>
-          <Box
-            w="380px"
-            h="218px"
-            bg="#F9F9F9"
-            borderRadius="16px"
-            boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-          >
-            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-              <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                на ХХ%
-              </Box>
-              <Box fontFamily="Manrope" fontSize="16px">
-                меньше людей в вагонахна Арбатско-Покровской линии
-              </Box>
-            </Box>
-
-            <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              Мы выпускаем больше поездов в метро, чтобы поездки были еще
-              комфортнее
-            </Box>
-          </Box>
-        </Flex>
-      </Box>
-
-      <Box mt="30px">
-        <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-          <Flex mb="25px">
-            <Box color="#D34040">БЕЗОПАСНЕЕ</Box>
-          </Flex>
-        </Center>
-        <Box
-          maxW="1180px"
-          maxH="175px"
-          borderRadius="16px"
-          bg="#D34040"
-          p="15px"
-        >
-          <Flex
-          // justifyContent="space-between"
-          >
-            <Box w="199px" h="131px">
-              <Box
-                w="157px"
-                h="105px"
-                color="#FFFFFF"
-                fontFamily="Unbounded"
-                fontWeight="600"
-                fontSize="24px"
-              >
-                Новые станции метро - это
+                Новый подвижной состав
               </Box>
             </Box>
             <Box>
@@ -311,12 +195,13 @@ function MM2010() {
                 lineHeight="19.2px"
               >
                 <UnorderedList w="343.5px">
-                  <ListItem>Новые удобные маршруты</ListItem>
-                  <ListItem>Меньше времени в пути</ListItem>
+                  <ListItem>плавный ход</ListItem>
+                  <ListItem>крепления для велосипедов</ListItem>
+                  <ListItem>USB-зарядки для устройств</ListItem>
                 </UnorderedList>
                 <UnorderedList w="343.5px">
-                  <ListItem>Повышение стоимости жилья на 12 %</ListItem>
-                  <ListItem>Больше рабочих мест в районе</ListItem>
+                  <ListItem>широкие дверные проемы</ListItem>
+                  <ListItem>сквозной проход</ListItem>
                 </UnorderedList>
               </Flex>
             </Box>
@@ -337,16 +222,15 @@ function MM2010() {
           >
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                99%
+                до 12%
               </Box>
               <Box fontFamily="Manrope" fontSize="16px">
-                вентиляционных шахт было модернизировано
+                составляет разгрузка линий метро
               </Box>
             </Box>
 
             <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              Благодаря современному оборудованию, воздух в метро обновляется
-              каждые 20 мин
+              Благодаря МЦД поездки на метро тоже становятся комфортнее
             </Box>
           </Box>
           <Box
@@ -358,15 +242,16 @@ function MM2010() {
           >
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                ХХ км
+                100%
               </Box>
               <Box fontFamily="Manrope" fontSize="16px">
-                рельс заменили в метро с 2010 года
+                вагонов МЦД - это обновленные подвижные составы
               </Box>
             </Box>
 
             <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              После модернизации инфраструктуры в вагонах стало значительно тише
+              <b>1 место</b> в России по темпам обновления ЖД поездов среди
+              мегаполисов
             </Box>
           </Box>
           <Box
@@ -378,15 +263,75 @@ function MM2010() {
           >
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                ХХ
+                до 75%
               </Box>
               <Box fontFamily="Manrope" fontSize="16px">
-                навесов установлено на входах в метро
+                дешевле стал проезд на направлениях для жителей Московской
+                области
               </Box>
             </Box>
 
             <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-              Они защищают инфраструктуруи пассажиров и от осадков и обледенения
+              С МЦД поездки стали дешевле, а пересадки на метро и МЦК -
+              бесплатными
+            </Box>
+          </Box>
+        </Flex>
+      </Box>
+
+      <Box mt="30px">
+        <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
+          <Flex mb="25px">
+            <Box color="#F6A500">БЕЗОПАСНЕЕ</Box>
+          </Flex>
+        </Center>
+
+        <Flex
+          mt="30px"
+          justifyContent={isSmallerThan1000 ? "center" : "space-between"}
+          flexWrap="wrap"
+          gap="20px"
+        >
+          <Box
+            w="380px"
+            h="218px"
+            bg="#F9F9F9"
+            borderRadius="16px"
+            boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
+          >
+            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
+              <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
+                100%
+              </Box>
+              <Box fontFamily="Manrope" fontSize="16px">
+                бактерий и вирусов уничтожает система очистки воздуха
+              </Box>
+            </Box>
+
+            <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
+              В поездах "Иволга" постоянно работает современная система очистки
+              воздуха.
+            </Box>
+          </Box>
+          <Box
+            w="380px"
+            h="218px"
+            bg="#F9F9F9"
+            borderRadius="16px"
+            boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
+          >
+            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
+              <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
+                до 11
+              </Box>
+              <Box fontFamily="Manrope" fontSize="16px">
+                камер установлено в каждом вагоне
+              </Box>
+            </Box>
+
+            <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
+              Видеонаблюдение помогает нам обеспечивать безопасность пассажиров
+              в транспорте
             </Box>
           </Box>
         </Flex>
@@ -394,4 +339,4 @@ function MM2010() {
     </Container>
   );
 }
-export default MM2010;
+export default PGD2010;

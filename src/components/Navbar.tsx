@@ -9,7 +9,7 @@ function Navbar() {
   return (
     <Container fontFamily='heading' overflow='auto'>
       <Flex align-items='center' justifyContent='space-between'>
-        <NavLink to='/'>
+        <NavLink to='/main'>
           <Button
             as={motion.div}
             maxW='118px'
@@ -22,7 +22,7 @@ function Navbar() {
           </Button>
         </NavLink>
 
-        <NavLink to='/'>
+        <NavLink to='/metro'>
           <Button
             as={motion.div}
             maxW='108px'
@@ -34,7 +34,7 @@ function Navbar() {
             Метро
           </Button>
         </NavLink>
-        <NavLink to='/'>
+        <NavLink to='/groundtransport'>
           <Button
             as={motion.div}
             maxW='206px'
@@ -46,7 +46,7 @@ function Navbar() {
             Наземный транспорт
           </Button>
         </NavLink>
-        <NavLink to='/'>
+        <NavLink to='/suburbanrailway'>
           <Button
             as={motion.div}
             maxW='180px'
@@ -58,7 +58,7 @@ function Navbar() {
             Пригородное ЖД
           </Button>
         </NavLink>
-        <NavLink to='/'>
+        <NavLink to='/roads'>
           <Button
             as={motion.div}
             maxW='114px'
@@ -70,7 +70,7 @@ function Navbar() {
             Дороги
           </Button>
         </NavLink>
-        <NavLink to='/'>
+        <NavLink to='/sharing'>
           <Button
             as={motion.div}
             width='116px'
@@ -82,7 +82,7 @@ function Navbar() {
             Шеринг
           </Button>
         </NavLink>
-        <NavLink to='/'>
+        <NavLink to='/taxi'>
           <Button
             as={motion.div}
             width='102px'
@@ -94,7 +94,7 @@ function Navbar() {
             Такси
           </Button>
         </NavLink>
-        <NavLink to='/'>
+        <NavLink to='/station'>
           <Button
             as={motion.div}
             width='121px'

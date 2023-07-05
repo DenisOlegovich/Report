@@ -37,15 +37,15 @@ function App() {
           <Header />
           <Navbar />
           <Routes>
-            <Route path='/main' element={<Main />} />
-            <Route path='/metro' element={<MM2010 />} />
-            <Route path='/groundtransport' element={<NT2010 />} />
-            <Route path='/suburbanrailway' element={<PGD2010 />} />
-            <Route path='/roads' element={<DD2010 />} />
-            <Route path='/sharing' element={<SHS2010 />} />
-            <Route path='/taxi' element={<TAXI2010 />} />
-            <Route path='/station' element={<AV2010 />} />
-            <Route path='*' element={""} />
+            <Route path="/main" element={<Main />} />
+            <Route path="/metro" element={<MM2010 />} />
+            <Route path="/groundtransport" element={<NT2010 />} />
+            <Route path="/suburbanrailway" element={<PGD2010 />} />
+            <Route path="/roads" element={<DD2010 />} />
+            <Route path="/sharing" element={<SHS2010 />} />
+            <Route path="/taxi" element={<TAXI2010 />} />
+            <Route path="/station" element={<AV2010 />} />
+            <Route path="*" element={<Main />} />
           </Routes>
           <Footer />
         </ChakraBaseProvider>

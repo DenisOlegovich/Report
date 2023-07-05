@@ -15,10 +15,16 @@ function Main() {
   const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
 
   return (
-    <>
-      <Image src='https://i.ibb.co/Tws8GSn/Main.jpg' width='100%' />
+    <Container bg="#F9F9F9">
+      <Image
+        src="https://i.ibb.co/Tws8GSn/Main.jpg"
+        maxW="1280px"
+        m="0 auto"
+        borderRadius="16px"
+        bg="#F9F9F9"
+      />
       <Statistics />
-    </>
+    </Container>
   );
 }
 export default Main;

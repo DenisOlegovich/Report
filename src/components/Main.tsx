@@ -16,10 +16,7 @@ function Main() {
 
   return (
     <>
-      <Image
-        src='https://avatars.mds.yandex.net/get-images-cbir/1970235/tzCnJ0SbbAsgok35xoj1Zw1188/ocr'
-        width='100%'
-      />
+      <Image src='https://i.ibb.co/Tws8GSn/Main.jpg' width='100%' />
       <Statistics />
     </>
   );

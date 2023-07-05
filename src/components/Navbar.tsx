@@ -7,7 +7,7 @@ function Navbar() {
   const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
 
   return (
-    <Container fontFamily='heading' overflow='auto'>
+    <Container fontFamily='heading' overflow='auto' maxW='1280px' m='0 auto'>
       <Flex align-items='center' justifyContent='space-between'>
         <NavLink to='/main'>
           <Button

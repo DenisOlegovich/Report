@@ -40,7 +40,7 @@ function StatisticsOutput() {
           borderRadius='16px'
           p='15px'
           bg='white'
-          backgroundImage="url('file:///Users/denis/Desktop/image%2041.jpeg')"
+          backgroundImage="url('https://i.ibb.co/d4YmV0X/image-150.jpg')"
           backgroundPosition='right bottom'
           backgroundRepeat='no-repeat'>
           <Flex w='293px' h='38px' alignItems='center'>
@@ -104,7 +104,7 @@ function StatisticsOutput() {
             w='647px'
             h='253px'
             borderRadius='16px'
-            backgroundImage="url('https://avatars.mds.yandex.net/get-images-cbir/1689385/3PC9Sh4lBIY5A51mOn0k-A5515/ocr')"
+            backgroundImage="url('https://i.ibb.co/qxGjnjp/image-41.jpg')"
             backgroundPosition='center'
             backgroundRepeat='no-repeat'
             p='20px'>
@@ -149,11 +149,7 @@ function StatisticsOutput() {
           h='146px'
           borderRadius='16px'
           p='20px'
-          bg='linear-gradient(to bottom left, rgba(186, 225, 254, 1), rgba(233, 246, 255, 1))'
-          // backgroundImage="url('https://avatars.mds.yandex.net/get-images-cbir/9558167/hFoTo19gdvBNTqulExyZ9A5891/ocr')"
-          // backgroundPosition='right bottom'
-          // backgroundRepeat='no-repeat'
-        >
+          bg="url('https://svgshare.com/i/utQ.svg') right no-repeat,linear-gradient(to bottom left, rgba(186, 225, 254, 1), rgba(233, 246, 255, 1))">
           <Box fontFamily='Unbounded' fontWeight='600' fontSize='24px'>
             Чем больше — тем выгоднее!
           </Box>
@@ -162,6 +158,7 @@ function StatisticsOutput() {
             прямо сейчас. Чем чаще Вы пользуетесь транспортом, тем ниже
             стоимость 1 поездки.
           </Box>
+          {/* <Cards /> */}
         </Box>
         <Box pt={isSmallerThan1200 ? "30px" : "0xp"}>
           <Box
@@ -169,7 +166,7 @@ function StatisticsOutput() {
             h='146px'
             borderRadius='16px'
             p='20px'
-            bg='linear-gradient(to bottom left, rgba(242, 205, 227, 1), rgba(255, 244, 228, 1))'>
+            bg="url('https://svgshare.com/i/uwu.svg') right no-repeat,linear-gradient(to bottom left, rgba(242, 205, 227, 1), rgba(255, 244, 228, 1))">
             <Box fontFamily='Unbounded' fontWeight='600' fontSize='24px'>
               Хотите ездить выгодно?
             </Box>

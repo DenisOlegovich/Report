@@ -17,7 +17,7 @@ function Statistics() {
 
   return (
     <Container bg='#F9F9F9'>
-      <Box maxW='1180px' h='2705px' m='0 auto'>
+      <Box maxW='1180px' h='1280px' m='0 auto'>
         <Box display='flex' align-items='center' justify-content='center'>
           <Box
             w='571'

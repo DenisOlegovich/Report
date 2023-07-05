@@ -20,9 +20,10 @@ import ApLine from "./Images/ApLine";
 import BclLine from "./Images/BclLine";
 import Number3 from "./Images/Number3";
 import Cards from "./Images/Cards";
-import ClockRed from "./Images/Clock";
+import ClockRed from "./Images/ClockRed";
 import HeartRed from "./Images/HeartRed";
 import ShieldRed from "./Images/ShieldRed";
+import MMLightBox from "./Images/MMLightBox";
 function MM2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
@@ -84,6 +85,7 @@ function MM2010() {
                   <ListItem>Повышение стоимости жилья на 12 %</ListItem>
                   <ListItem>Больше рабочих мест в районе</ListItem>
                 </UnorderedList>
+                <MMLightBox />
               </Flex>
             </Box>
           </Flex>
@@ -279,7 +281,7 @@ function MM2010() {
       <Box mt="30px">
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
           <Flex mb="25px" gap="10px" alignItems="center">
-            {/* <ShieldRed /> */}
+            <ShieldRed />
             <Box color="#D34040">БЕЗОПАСНЕЕ</Box>
           </Flex>
         </Center>

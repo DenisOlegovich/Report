@@ -18,7 +18,6 @@ function Main() {
     <Container bg="#F9F9F9">
       <Image
         src="https://i.ibb.co/Tws8GSn/Main.jpg"
-        maxW="1280px"
         m="0 auto"
         borderRadius="16px"
         bg="#F9F9F9"

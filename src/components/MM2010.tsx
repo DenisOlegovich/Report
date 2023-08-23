@@ -10,6 +10,7 @@ import {
   Center,
   UnorderedList,
   ListItem,
+  Img,
 } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -20,15 +21,25 @@ import ApLine from "./Images/ApLine";
 import BclLine from "./Images/BclLine";
 import Number3 from "./Images/Number3";
 import Cards from "./Images/Cards";
-import ClockRed from "./Images/ClockRed";
-import HeartRed from "./Images/HeartRed";
-import ShieldRed from "./Images/ShieldRed";
-import MMLightBox from "./Images/MMLightBox";
+
+import MMLightBox from "./Images/MMLightBox.svg";
+import Turniket from "./Images/Turniket.svg";
+import ClockRed from "./Images/ClockRed.svg";
+import HeartRed from "./Images/HeartRed.svg";
+import ShieldRed from "./Images/ShieldRed.svg";
+import CirclesRed from "./Images/CirclesRed.png";
 function MM2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
   return (
-    <Container maxW="1280px" bg="white" mt="30px" p="30px" m="0 auto">
+    <Container
+      maxW="1280px"
+      bg="white"
+      mt="30px"
+      p="30px"
+      m="0 auto"
+      bgImage={CirclesRed}
+    >
       <Center fontFamily="Manrope" fontSize="20px" pt="35px">
         с 2010 года
       </Center>
@@ -40,6 +51,7 @@ function MM2010() {
           <Flex mb="25px" gap="10px" alignItems="center">
             <Box>СТАЛ</Box>
             {/* <ClockRed /> */}
+            <Image src={ClockRed} />
             <Box color="#D34040">БЫСТРЕЕ</Box>
           </Flex>
         </Center>
@@ -62,6 +74,7 @@ function MM2010() {
                 fontFamily="Unbounded"
                 fontWeight="600"
                 fontSize="24px"
+                display="block"
               >
                 Новые станции метро - это
               </Box>
@@ -74,7 +87,7 @@ function MM2010() {
                 gap="20px"
                 justifyContent="space-between"
                 alignItems="center"
-                h="100%"
+                h="85%"
                 lineHeight="19.2px"
               >
                 <UnorderedList w="343.5px">
@@ -85,14 +98,14 @@ function MM2010() {
                   <ListItem>Повышение стоимости жилья на 12 %</ListItem>
                   <ListItem>Больше рабочих мест в районе</ListItem>
                 </UnorderedList>
-                {/* <MMLightBox /> */}
               </Flex>
             </Box>
+            <Image src={MMLightBox} mt="-85px" />
           </Flex>
         </Box>
         <Flex
           mt="30px"
-          justifyContent={isSmallerThan1000 ? "center" : "space-between"}
+          justifyContent={isSmallerThan1000 ? "center" : "space-around"}
           flexWrap="wrap"
           gap="20px"
         >
@@ -163,7 +176,8 @@ function MM2010() {
       <Box mt="30px">
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
           <Flex mb="25px" gap="10px" alignItems="center">
-            <HeartRed />
+            {/* <HeartRed /> */}
+            <Image src={HeartRed} />
             <Box color="#D34040">КОМФОРТНЕЕ</Box>
           </Flex>
         </Center>
@@ -179,18 +193,27 @@ function MM2010() {
           >
             <Box w="199px" h="131px">
               <Box
-                w="157px"
+                w="199px"
                 h="105px"
                 color="#FFFFFF"
                 fontFamily="Unbounded"
                 fontWeight="600"
                 fontSize="24px"
               >
-                Новые станции метро - это
+                Новые турникеты на всех станциях
               </Box>
             </Box>
-            <Box>
-              <Flex
+            <Box
+              fontFamily="Manrope"
+              fontSize="16px"
+              color="white"
+              gap="20px"
+              justifyContent="space-between"
+              alignItems="center"
+              h="100%"
+              lineHeight="19.2px"
+            >
+              <Box
                 fontFamily="Manrope"
                 fontSize="16px"
                 color="white"
@@ -202,15 +225,18 @@ function MM2010() {
               >
                 Мы заменили турникеты на всех станциях метро и МЦК, при оплате
                 банковской картой они срабатывают более чем в 2 раза, а по
-                биометрии - в 3 раза быстрее. В скором времени появится
-                возможность оплатить проезд и по СБП.
-              </Flex>
+                биометрии - в 3 раза быстрее.
+              </Box>
+              <Box>
+                В скором времени появится возможность оплатить проезд и по СБП.
+              </Box>
             </Box>
+            <Image src={Turniket} mt="-38px" />
           </Flex>
         </Box>
         <Flex
           mt="30px"
-          justifyContent={isSmallerThan1000 ? "center" : "space-between"}
+          justifyContent={isSmallerThan1000 ? "center" : "space-around"}
           flexWrap="wrap"
           gap="20px"
         >
@@ -281,7 +307,8 @@ function MM2010() {
       <Box mt="30px">
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
           <Flex mb="25px" gap="10px" alignItems="center">
-            <ShieldRed />
+            {/* <ShieldRed /> */}
+            <Image src={ShieldRed} />
             <Box color="#D34040">БЕЗОПАСНЕЕ</Box>
           </Flex>
         </Center>
@@ -332,7 +359,7 @@ function MM2010() {
         </Box>
         <Flex
           mt="30px"
-          justifyContent={isSmallerThan1000 ? "center" : "space-between"}
+          justifyContent={isSmallerThan1000 ? "center" : "space-around"}
           flexWrap="wrap"
           gap="20px"
         >

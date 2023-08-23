@@ -20,11 +20,14 @@ import ApLine from "./Images/ApLine";
 import BclLine from "./Images/BclLine";
 import Number3 from "./Images/Number3";
 import Cards from "./Images/Cards";
+import ClockRed from "./Images/ClockRed.svg";
+import HeartRed from "./Images/HeartRed.svg";
+import ShieldRed from "./Images/ShieldRed.svg";
 function AV2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
   return (
-    <Container bg="white" mt="30px">
+    <Container maxW="1280px" bg="white" mt="30px" p="30px" m="0 auto">
       <Center fontFamily="Unbounded" fontWeight="700" fontSize="44px">
         АВТОВОКЗАЛЫ
       </Center>
@@ -70,7 +73,7 @@ function AV2010() {
         </Box>
         <Flex
           mt="30px"
-          justifyContent={isSmallerThan1000 ? "center" : "space-between"}
+          justifyContent={isSmallerThan1000 ? "center" : "space-around"}
           flexWrap="wrap"
           gap="20px"
         >

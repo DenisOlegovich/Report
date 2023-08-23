@@ -20,11 +20,14 @@ import ApLine from "./Images/ApLine";
 import BclLine from "./Images/BclLine";
 import Number3 from "./Images/Number3";
 import Cards from "./Images/Cards";
+import ClockYellow from "./Images/ClockYellow.svg";
+import HeartYellow from "./Images/HeartYellow.svg";
+import ShieldYellow from "./Images/ShieldYellow.svg";
 function PGD2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
   return (
-    <Container bg="white" mt="30px">
+    <Container maxW="1280px" bg="white" mt="30px" p="30px" m="0 auto">
       <Center fontFamily="Manrope" fontSize="20px" pt="35px">
         с 2010 года
       </Center>
@@ -33,9 +36,10 @@ function PGD2010() {
       </Center>
       <Box mt="30px">
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-          <Flex mb="25px">
+          <Flex mb="25px" gap="10px" alignItems="center">
             <Box>СТАЛ</Box>
-            <Box> </Box>
+            {/* <ClockRed /> */}
+            <Image src={ClockYellow} />
             <Box color="#F6A500">БЫСТРЕЕ</Box>
           </Flex>
         </Center>
@@ -86,7 +90,7 @@ function PGD2010() {
         </Box>
         <Flex
           mt="30px"
-          justifyContent={isSmallerThan1000 ? "center" : "space-between"}
+          justifyContent={isSmallerThan1000 ? "center" : "space-around"}
           flexWrap="wrap"
           gap="20px"
         >
@@ -157,7 +161,10 @@ function PGD2010() {
 
       <Box mt="30px">
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-          <Flex mb="25px">
+          <Flex mb="25px" gap="10px" alignItems="center">
+            <Box>СТАЛ</Box>
+            {/* <ClockRed /> */}
+            <Image src={HeartYellow} />
             <Box color="#F6A500">КОМФОРТНЕЕ</Box>
           </Flex>
         </Center>
@@ -209,7 +216,7 @@ function PGD2010() {
         </Box>
         <Flex
           mt="30px"
-          justifyContent={isSmallerThan1000 ? "center" : "space-between"}
+          justifyContent={isSmallerThan1000 ? "center" : "space-around"}
           flexWrap="wrap"
           gap="20px"
         >
@@ -281,14 +288,17 @@ function PGD2010() {
 
       <Box mt="30px">
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-          <Flex mb="25px">
+          <Flex mb="25px" gap="10px" alignItems="center">
+            <Box>СТАЛ</Box>
+            {/* <ClockRed /> */}
+            <Image src={ShieldYellow} />
             <Box color="#F6A500">БЕЗОПАСНЕЕ</Box>
           </Flex>
         </Center>
 
         <Flex
           mt="30px"
-          justifyContent={isSmallerThan1000 ? "center" : "space-between"}
+          justifyContent={isSmallerThan1000 ? "center" : "space-around"}
           flexWrap="wrap"
           gap="20px"
         >

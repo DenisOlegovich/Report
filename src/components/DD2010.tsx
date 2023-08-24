@@ -23,11 +23,23 @@ import Cards from "./Images/Cards";
 import ClockGreen from "./Images/ClockGreen.svg";
 import HeartGreen from "./Images/HeartGreen.svg";
 import ShieldGreen from "./Images/ShieldGreen.svg";
+import CirclesGreen from "./Images/CirclesGreen.png";
+import CirclesParking from "./Images/CirclesParking.png";
+import Road from "./Images/Road.svg";
+import LogoParking from "./Images/LogoParking.svg";
+import Cameras from "./Images/Cameras.svg";
 function DD2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
   return (
-    <Container maxW="1280px" bg="white" mt="30px" p="30px" m="0 auto">
+    <Container
+      maxW="1280px"
+      bg="white"
+      mt="30px"
+      p="30px"
+      m="0 auto"
+      bgImage={CirclesGreen}
+    >
       <Center fontFamily="Manrope" fontSize="20px" pt="35px">
         с 2010 года
       </Center>
@@ -91,51 +103,25 @@ function DD2010() {
             </Box>
           </Box>
         </Flex>
-        <Box
+        <Flex
           maxW="1180px"
-          maxH="175px"
+          maxH="259px"
           borderRadius="16px"
-          bg="#D34040"
-          p="15px"
+          bg="#FFFFFF"
+          shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
         >
-          <Flex
-          // justifyContent="space-between"
-          >
-            <Box w="199px" h="131px">
-              <Box
-                w="157px"
-                h="105px"
-                color="#FFFFFF"
-                fontFamily="Unbounded"
-                fontWeight="600"
-                fontSize="24px"
-              >
-                Новые станции метро - это
-              </Box>
+          <Image src={Road} />
+          <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
+            <Box fontFamily="Unbounded" fontWeight="600" fontSize="24px">
+              Московский скоростной диаметр
             </Box>
-            <Box>
-              <Flex
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="white"
-                gap="20px"
-                justifyContent="space-between"
-                alignItems="center"
-                h="100%"
-                lineHeight="19.2px"
-              >
-                <UnorderedList w="343.5px">
-                  <ListItem>Новые удобные маршруты</ListItem>
-                  <ListItem>Меньше времени в пути</ListItem>
-                </UnorderedList>
-                <UnorderedList w="343.5px">
-                  <ListItem>Повышение стоимости жилья на 12 %</ListItem>
-                  <ListItem>Больше рабочих мест в районе</ListItem>
-                </UnorderedList>
-              </Flex>
+            <Box fontFamily="Manrope" fontSize="16px">
+              Мы постоянно строим новые развязки и дороги, а недавно мы
+              запустили Основной участок МСД - новую транспортную магистраль
+              регионального уровня
             </Box>
-          </Flex>
-        </Box>
+          </Box>
+        </Flex>
         <Flex
           mt="30px"
           justifyContent={isSmallerThan1000 ? "center" : "space-around"}
@@ -201,6 +187,9 @@ function DD2010() {
           borderRadius="16px"
           bg="#68AD45"
           p="15px"
+          bgImage={CirclesParking}
+          backgroundPosition="right"
+          backgroundRepeat="no-repeat"
         >
           <Flex
           // justifyContent="space-between"
@@ -233,6 +222,7 @@ function DD2010() {
                 Digital Awards 2022 в номинации «Приложение для информации»
               </Flex>
             </Box>
+            <Image src={LogoParking} mt="-85px" />
           </Flex>
         </Box>
         <Flex
@@ -354,6 +344,7 @@ function DD2010() {
                 детекторов и светофоров
               </Flex>
             </Box>
+            <Image src={Cameras} mt="-124px" />
           </Flex>
         </Box>
         <Flex

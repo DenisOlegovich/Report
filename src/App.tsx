@@ -15,13 +15,13 @@ import DD2010 from "./components/DD2010";
 import SHS2010 from "./components/SHS2010";
 import TAXI2010 from "./components/TAXI2010";
 import AV2010 from "./components/AV2010";
-
 export const theme = extendBaseTheme({
   // fonts: {
   //   heading: `'Manrope', sans-serif`,
   //   body: `'Unbounded', sans-serif`,
   //   size: "14px",
   // },
+
   components: {
     Modal: defaultTheme.components.Modal,
     Select: defaultTheme.components.Select,

@@ -23,6 +23,7 @@ import Cards from "./Images/Cards";
 import ClockRed from "./Images/ClockRed.svg";
 import HeartRed from "./Images/HeartRed.svg";
 import ShieldRed from "./Images/ShieldRed.svg";
+import BusStation from "./Images/BusStation.svg";
 function AV2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
@@ -69,6 +70,7 @@ function AV2010() {
                 закончим работы на автостанции «Красногвардейская».
               </Flex>
             </Box>
+            <Image src={BusStation} mt="-134px" />
           </Flex>
         </Box>
         <Flex

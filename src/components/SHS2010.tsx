@@ -20,9 +20,10 @@ import ApLine from "./Images/ApLine";
 import BclLine from "./Images/BclLine";
 import Number3 from "./Images/Number3";
 import Cards from "./Images/Cards";
-import ClockRed from "./Images/ClockRed.svg";
-import HeartRed from "./Images/HeartRed.svg";
-import ShieldRed from "./Images/ShieldRed.svg";
+import Velo from "./Images/Velo.svg";
+import Carsh from "./Images/Carsh.svg";
+import Scooter from "./Images/Scooter.svg";
+import Sharing from "./Images/Sharing.svg";
 function SHS2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
@@ -38,53 +39,31 @@ function SHS2010() {
         ШЕРИНГОВЫЕ СЕРВИСЫ
       </Center>
       <Box mt="30px">
-        <Box
-          maxW="1180px"
-          maxH="175px"
-          borderRadius="16px"
-          bg="#D34040"
-          p="15px"
-        >
+        <Box maxW="1180px" maxH="175px" borderRadius="16px" bg="#D34040">
           <Flex
-          // justifyContent="space-between"
+            maxW="1180px"
+            maxH="175px"
+            borderRadius="16px"
+            bg="#FFFFFF"
+            shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
           >
-            <Box w="199px" h="131px">
-              <Box
-                w="157px"
-                h="105px"
-                color="#FFFFFF"
-                fontFamily="Unbounded"
-                fontWeight="600"
-                fontSize="24px"
-              >
-                Новые станции метро - это
+            <Image src={Sharing} />
+            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
+              <Box fontFamily="Unbounded" fontWeight="600" fontSize="24px">
+                Сервисы аренды
               </Box>
-            </Box>
-            <Box>
-              <Flex
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="white"
-                gap="20px"
-                justifyContent="space-between"
-                alignItems="center"
-                h="100%"
-                lineHeight="19.2px"
-              >
-                <UnorderedList w="343.5px">
-                  <ListItem>Новые удобные маршруты</ListItem>
-                  <ListItem>Меньше времени в пути</ListItem>
-                </UnorderedList>
-                <UnorderedList w="343.5px">
-                  <ListItem>Повышение стоимости жилья на 12 %</ListItem>
-                  <ListItem>Больше рабочих мест в районе</ListItem>
-                </UnorderedList>
-              </Flex>
+              <Box fontFamily="Manrope" fontSize="16px">
+                Используют в качестве самостоятельного вида транспорта, а также
+                для построения мультимодальных маршрутов, что позволяет повысить
+                доступность отдельных районов города и снизить нагрузку на
+                дороги
+              </Box>
             </Box>
           </Flex>
         </Box>
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-          <Flex mb="25px">
+          <Flex mb="25px" gap="10px" alignItems="center">
+            <Image src={Velo} />
             <Box color="#828282">ВЕЛОПРОКАТ (С 2013 Г.)</Box>
           </Flex>
         </Center>
@@ -138,7 +117,8 @@ function SHS2010() {
           </Box>
         </Flex>
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-          <Flex mb="25px">
+          <Flex mb="25px" gap="10px" alignItems="center">
+            <Image src={Carsh} />
             <Box color="#828282">КАРШЕРИНГ (С 2015 Г.)</Box>
           </Flex>
         </Center>
@@ -191,7 +171,8 @@ function SHS2010() {
         </Flex>
 
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-          <Flex mb="25px">
+          <Flex mb="25px" gap="10px" alignItems="center">
+            <Image src={Scooter} />
             <Box color="#828282">КИКШЕРИНГ (С 2018 Г.)</Box>
           </Flex>
         </Center>

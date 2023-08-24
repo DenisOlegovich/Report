@@ -8,13 +8,6 @@ import {
   Image,
   Spacer,
   Center,
-  Input,
-  Tabs,
-  Tab,
-  TabList,
-  TabPanel,
-  TabPanels,
-  Link,
 } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
@@ -37,58 +30,149 @@ function StatisticsOutput() {
     <Container>
       <NavbarStatistics />
       <Flex
-        pt="30px"
-        pb="30px"
+        pt='30px'
+        pb='30px'
         justifyContent={isSmallerThan1200 ? "center" : "space-between"}
-        flexWrap="wrap"
-      >
+        flexWrap='wrap'>
         <Box
-          w={isSmallerThan1200 ? "90%" : "500px"}
-          h="480px"
-          borderRadius="16px"
-          p="15px"
-          bg="white"
+          w={isSmallerThan1200 ? "90%" : "380px"}
+          h='345px'
+          borderRadius='16px'
+          p='15px'
+          bg='white'
           backgroundImage="url('https://i.ibb.co/d4YmV0X/image-150.jpg')"
-          backgroundPosition="right bottom"
-          backgroundRepeat="no-repeat"
-        >
-          <Flex w="293px" h="38px" alignItems="center">
-            <Box pl="15px" fontFamily="Manrope" fontSize="20px">
-              Построить маршрут
+          backgroundPosition='right bottom'
+          backgroundRepeat='no-repeat'>
+          <Flex w='293px' h='38px' alignItems='center'>
+            <Mark />
+            <Box pl='15px' fontFamily='Manrope' fontSize='20px'>
+              Ваш район
             </Box>
           </Flex>
-          <Input placeholder="Откуда"></Input>
-          <Input placeholder="Куда"></Input>
-          <Tabs variant="enclosed">
-            <TabList>
-              <Tab>One</Tab>
-              <Tab>Two</Tab>
-            </TabList>
-            <TabPanels>
-              <TabPanel>
-                <p>one!</p>
-              </TabPanel>
-              <TabPanel>
-                <p>two!</p>
-              </TabPanel>
-            </TabPanels>
-          </Tabs>
-          <Button>Построить маршрут</Button>
-          <Link href="/mostrans/build_route">Карта</Link>
+          <Box
+            fontFamily='Unbounded'
+            fontWeight='600'
+            fontSize='30px'
+            pl='44px'>
+            Измайлово
+          </Box>
+          <Box
+            fontFamily='Manrope'
+            fontSize='16px'
+            color='#878787'
+            w='247px'
+            h='57px'
+            pl='44px'>
+            (Основываясь на данных вашей транспортной карты)
+          </Box>
         </Box>
-        <Box
-          w="380px"
-          h="229px"
-          bg="#a2a9b1"
-          borderRadius="16px"
-          boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-        >
-          <Box w="50%" h="120px" p="20px" borderRadius="16px" color="white">
-            <Box fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-              Оплата проезда
+
+        <Box maxW='776px' h='345px' borderRadius='16px' p='15px' bg='white'>
+          <Box>
+            <Box fontFamily='Manrope' fontSize='16px'>
+              Ваша любимая линия метро
             </Box>
-            <Box fontFamily="Manrope" fontSize="16px">
-              Все, что нужно знать о ценах и способах оплаты
+            <Box fontFamily='Unbounded' fontWeight='600' fontSize='24px'>
+              Арбатско-Покровская линия
+            </Box>
+            <ApLine />
+            <Box fontFamily='Manrope' fontSize='16px' color='#878787'>
+              Это самая длинная некольцевая линия метро в Москве (45,1 км)
+            </Box>
+          </Box>
+
+          <Box pt='50px'>
+            <Box fontFamily='Manrope' fontSize='16px'>
+              а еще иногда пользуетесь
+            </Box>
+            <Box fontFamily='Unbounded' fontWeight='600' fontSize='24px'>
+              Большой кольцевой линией
+            </Box>
+            <BclLine />
+            <Box fontFamily='Manrope' fontSize='16px' color='#878787'>
+              Это самое большое метрокольцо в мире! (70 км)
+            </Box>
+          </Box>
+        </Box>
+      </Flex>
+
+      <Box bg='white' borderRadius='16px'>
+        <Flex
+          justifyContent={isSmallerThan1200 ? "center" : "space-between"}
+          flexWrap='wrap'>
+          <Box
+            w='647px'
+            h='253px'
+            borderRadius='16px'
+            backgroundImage="url('https://i.ibb.co/qxGjnjp/image-41.jpg')"
+            backgroundPosition='center'
+            backgroundRepeat='no-repeat'
+            p='20px'>
+            <Box
+              w='250px'
+              h='51px'
+              borderRadius='8px'
+              p='8px 12px 8px 12px'
+              bg='rgba(255, 255, 255, 0.8)'>
+              <Flex alignItems='center'>
+                <Number3 />
+                <Box
+                  fontFamily='Unbounded'
+                  fontWeight='600'
+                  fontSize='24px'
+                  pl='15px'>
+                  Измайлово
+                </Box>
+              </Flex>
+            </Box>
+          </Box>
+
+          <Center w='532px' h='253px'>
+            <Box mt='auto' mb='auto'>
+              <Box fontFamily='Unbounded' fontWeight='600' fontSize='24px'>
+                10 новых станций
+              </Box>
+              <Box fontFamily='Manrope' fontSize='20px'>
+                метро открылось в вашем районе
+              </Box>
+            </Box>
+          </Center>
+        </Flex>
+      </Box>
+
+      <Flex
+        justifyContent={isSmallerThan1200 ? "center" : "space-between"}
+        flexWrap='wrap'
+        pt='30px'>
+        <Box
+          w='578px'
+          h='146px'
+          borderRadius='16px'
+          p='20px'
+          bg="url('https://svgshare.com/i/utQ.svg') right no-repeat,linear-gradient(to bottom left, rgba(186, 225, 254, 1), rgba(233, 246, 255, 1))">
+          <Box fontFamily='Unbounded' fontWeight='600' fontSize='24px'>
+            Чем больше — тем выгоднее!
+          </Box>
+          <Box fontFamily='Monrope' fontSize='16px' w='450px'>
+            Совершайте поездки по абонементам на 30, 90 или 365 дней и экономьте
+            прямо сейчас. Чем чаще Вы пользуетесь транспортом, тем ниже
+            стоимость 1 поездки.
+          </Box>
+          {/* <Cards /> */}
+        </Box>
+        <Box pt={isSmallerThan1200 ? "30px" : "0xp"}>
+          <Box
+            w='578px'
+            h='146px'
+            borderRadius='16px'
+            p='20px'
+            bg="url('https://svgshare.com/i/uwu.svg') right no-repeat,linear-gradient(to bottom left, rgba(242, 205, 227, 1), rgba(255, 244, 228, 1))">
+            <Box fontFamily='Unbounded' fontWeight='600' fontSize='24px'>
+              Хотите ездить выгодно?
+            </Box>
+            <Box fontFamily='Monrope' fontSize='16px' w='450px'>
+              Наш тарифный калькулятор поможет Вам подобрать наиболее
+              подходящийпроездной билет.
             </Box>
           </Box>
         </Box>

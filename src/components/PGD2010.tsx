@@ -23,11 +23,21 @@ import Cards from "./Images/Cards";
 import ClockYellow from "./Images/ClockYellow.svg";
 import HeartYellow from "./Images/HeartYellow.svg";
 import ShieldYellow from "./Images/ShieldYellow.svg";
+import Train from "./Images/Train.svg";
+import CirclesOrange from "./Images/CirclesOrange.png";
+import Station2 from "./Images/Station2.svg";
 function PGD2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
   return (
-    <Container maxW="1280px" bg="white" mt="30px" p="30px" m="0 auto">
+    <Container
+      maxW="1280px"
+      bg="white"
+      mt="30px"
+      p="30px"
+      m="0 auto"
+      bgImage={CirclesOrange}
+    >
       <Center fontFamily="Manrope" fontSize="20px" pt="35px">
         с 2010 года
       </Center>
@@ -38,56 +48,31 @@ function PGD2010() {
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
           <Flex mb="25px" gap="10px" alignItems="center">
             <Box>СТАЛ</Box>
-            {/* <ClockRed /> */}
             <Image src={ClockYellow} />
             <Box color="#F6A500">БЫСТРЕЕ</Box>
           </Flex>
         </Center>
-        <Box
+        <Flex
           maxW="1180px"
-          maxH="175px"
+          maxH="194px"
           borderRadius="16px"
-          bg="#D34040"
-          p="15px"
+          bg="#FFFFFF"
+          shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
         >
-          <Flex
-          // justifyContent="space-between"
-          >
-            <Box w="199px" h="131px">
-              <Box
-                w="157px"
-                h="105px"
-                color="#FFFFFF"
-                fontFamily="Unbounded"
-                fontWeight="600"
-                fontSize="24px"
-              >
-                Новые станции метро - это
-              </Box>
+          <Image src={Station2} />
+          <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
+            <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
+              Курьяново
             </Box>
-            <Box>
-              <Flex
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="white"
-                gap="20px"
-                justifyContent="space-between"
-                alignItems="center"
-                h="100%"
-                lineHeight="19.2px"
-              >
-                <UnorderedList w="343.5px">
-                  <ListItem>Новые удобные маршруты</ListItem>
-                  <ListItem>Меньше времени в пути</ListItem>
-                </UnorderedList>
-                <UnorderedList w="343.5px">
-                  <ListItem>Повышение стоимости жилья на 12 %</ListItem>
-                  <ListItem>Больше рабочих мест в районе</ListItem>
-                </UnorderedList>
-              </Flex>
+            <Box fontFamily="Manrope" fontSize="16px">
+              новая станция МЦД в вашем районе
             </Box>
-          </Flex>
-        </Box>
+            <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C">
+              Московские центральные диаметры - новый вид транспорта, который
+              объединяет форматпригородных электричек и метрополитена
+            </Box>
+          </Box>
+        </Flex>
         <Flex
           mt="30px"
           justifyContent={isSmallerThan1000 ? "center" : "space-around"}
@@ -163,7 +148,6 @@ function PGD2010() {
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
           <Flex mb="25px" gap="10px" alignItems="center">
             <Box>СТАЛ</Box>
-            {/* <ClockRed /> */}
             <Image src={HeartYellow} />
             <Box color="#F6A500">КОМФОРТНЕЕ</Box>
           </Flex>
@@ -174,6 +158,9 @@ function PGD2010() {
           borderRadius="16px"
           bg="#F6A500"
           p="15px"
+          bgImage={Train}
+          backgroundPosition="right"
+          backgroundRepeat="no-repeat"
         >
           <Flex
           // justifyContent="space-between"
@@ -290,7 +277,6 @@ function PGD2010() {
         <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
           <Flex mb="25px" gap="10px" alignItems="center">
             <Box>СТАЛ</Box>
-            {/* <ClockRed /> */}
             <Image src={ShieldYellow} />
             <Box color="#F6A500">БЕЗОПАСНЕЕ</Box>
           </Flex>

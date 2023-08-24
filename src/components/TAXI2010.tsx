@@ -23,6 +23,7 @@ import Cards from "./Images/Cards";
 import ClockRed from "./Images/ClockRed.svg";
 import HeartRed from "./Images/HeartRed.svg";
 import ShieldRed from "./Images/ShieldRed.svg";
+import Taxi from "./Images/Taxi.svg";
 function TAXI2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
@@ -106,48 +107,23 @@ function TAXI2010() {
         </Box>
       </Flex>
       <Box mt="30px">
-        <Box
-          maxW="1180px"
-          maxH="175px"
-          borderRadius="16px"
-          bg="#D34040"
-          p="15px"
-        >
+        <Box maxW="1180px" maxH="211px" borderRadius="16px" bg="#D34040">
           <Flex
-          // justifyContent="space-between"
+            maxW="1180px"
+            maxH="175px"
+            borderRadius="16px"
+            bg="#FFFFFF"
+            shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
           >
-            <Box w="199px" h="131px">
-              <Box
-                w="157px"
-                h="105px"
-                color="#FFFFFF"
-                fontFamily="Unbounded"
-                fontWeight="600"
-                fontSize="24px"
-              >
-                Новые станции метро - это
+            <Image src={Taxi} />
+            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
+              <Box fontFamily="Unbounded" fontWeight="600" fontSize="24px">
+                Польза во время пандемии
               </Box>
-            </Box>
-            <Box>
-              <Flex
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="white"
-                gap="20px"
-                justifyContent="space-between"
-                alignItems="center"
-                h="100%"
-                lineHeight="19.2px"
-              >
-                <UnorderedList w="343.5px">
-                  <ListItem>Новые удобные маршруты</ListItem>
-                  <ListItem>Меньше времени в пути</ListItem>
-                </UnorderedList>
-                <UnorderedList w="343.5px">
-                  <ListItem>Повышение стоимости жилья на 12 %</ListItem>
-                  <ListItem>Больше рабочих мест в районе</ListItem>
-                </UnorderedList>
-              </Flex>
+              <Box fontFamily="Manrope" fontSize="16px">
+                Во время пандемии COVID-19 до 600 автомобилей такси каждый день
+                доставляли врачей к заболевшим жителям столицы
+              </Box>
             </Box>
           </Flex>
         </Box>

@@ -6,17 +6,16 @@ function Header() {
   const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
 
   return (
-    <Container fontFamily="heading" m="0 auto" h="142px" bg="red">
+    <Container fontFamily='heading' maxW='1280px' m='0 auto'>
       <Flex
-        m="0px 20px"
-        align-items="center"
+        m='0px 20px'
+        align-items='center'
         justifyContent={isSmallerThan800 ? "center" : "space-between"}
-        align="center"
-        h="70px"
-      >
-        <Flex align="center">
+        align='center'
+        h='70px'>
+        <Flex align='center'>
           <LogoMT />
-          <Box paddingLeft="10px">Департамент транспорта г. Москвы</Box>
+          <Box paddingLeft='10px'>Департамент транспорта г. Москвы</Box>
         </Flex>
         <Box>Карта Тройка № 456 876 778 | Выход</Box>
       </Flex>

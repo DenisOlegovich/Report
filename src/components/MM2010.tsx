@@ -11,7 +11,14 @@ import {
   UnorderedList,
   ListItem,
   Img,
+  Highlight,
 } from "@chakra-ui/react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import "swiper/css";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
+import { Keyboard, Pagination, Navigation } from "swiper/modules";
+
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import ReportAuthorization from "./ReportAuthorization";
@@ -37,13 +44,13 @@ function MM2010() {
     {
       title: "107",
       title2: "новых станций метро и МЦК было открыто с 2010 года",
-      description: "<b>1 место</b> в Европе по темпам открытия новых станций",
+      description: "1 место в Европе по темпам открытия новых станций",
     },
     {
       title: "99, 98%",
       title2: "точность соблюдения графика движения в метро",
       description:
-        "<b>1 место</b> в мире по точности соблюдения графика движения поездов",
+        "1 место в мире по точности соблюдения графика движения поездов",
     },
     {
       title: "на ХХ",
@@ -93,65 +100,61 @@ function MM2010() {
   ];
   return (
     <Container
-      bg="white"
+      bg='white'
       bgImage={CirclesRed}
-      backgroundSize="cover"
-      backgroundRepeat="no-repeat"
-    >
-      <Box maxW="1280px" mt="30px" p="30px" m="0 auto">
-        <Center fontFamily="Manrope" fontSize="20px" pt="35px">
+      backgroundSize='cover'
+      backgroundRepeat='no-repeat'>
+      <Box maxW='1280px' mt='30px' p='30px' m='0 auto'>
+        <Center fontFamily='Manrope' fontSize='20px' pt='35px'>
           с 2010 года
         </Center>
-        <Center fontFamily="Unbounded" fontWeight="700" fontSize="44px">
+        <Center fontFamily='Unbounded' fontWeight='700' fontSize='44px'>
           МОСКОВСКИЙ МЕТРОПОЛИТЕН
         </Center>
-        <Box mt="30px">
-          <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-            <Flex mb="25px" gap="10px" alignItems="center">
+        <Box mt='30px'>
+          <Center fontFamily='Unbounded' fontWeight='600' fontSize='20px'>
+            <Flex mb='25px' gap='10px' alignItems='center'>
               <Box>СТАЛ</Box>
               <Image src={ClockRed} />
-              <Box color="#D34040">БЫСТРЕЕ</Box>
+              <Box color='#D34040'>БЫСТРЕЕ</Box>
             </Flex>
           </Center>
           <Flex
-            maxW="1180px"
-            h="175px"
-            borderRadius="16px"
-            bg="#D34040"
-            m="0 auto"
-            position="relative"
-          >
-            <Flex p="20px" w="80%">
+            maxW='1180px'
+            h='175px'
+            borderRadius='16px'
+            bg='#D34040'
+            m='0 auto'
+            position='relative'>
+            <Flex p='20px' w='80%'>
               <Box
-                w="199px"
-                h="131px"
-                color="#FFFFFF"
-                fontFamily="Unbounded"
-                fontWeight="600"
-                fontSize="24px"
-                p="13px 42px 13px 0px"
-                lineHeight="120%"
-              >
+                w='199px'
+                h='131px'
+                color='#FFFFFF'
+                fontFamily='Unbounded'
+                fontWeight='600'
+                fontSize='24px'
+                p='13px 42px 13px 0px'
+                lineHeight='120%'>
                 Новые станции метро - это
               </Box>
 
               <Center
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="white"
-                gap="20px"
-                alignItems="center"
-                h="100%"
-                lineHeight="19.2px"
-                flex="1"
-                rowGap="12px"
-              >
+                fontFamily='Manrope'
+                fontSize='16px'
+                color='white'
+                gap='20px'
+                alignItems='center'
+                h='100%'
+                lineHeight='19.2px'
+                flex='1'
+                rowGap='12px'>
                 <UnorderedList>
-                  <ListItem mb="12px">Новые удобные маршруты</ListItem>
+                  <ListItem mb='12px'>Новые удобные маршруты</ListItem>
                   <ListItem>Меньше времени в пути</ListItem>
                 </UnorderedList>
                 <UnorderedList>
-                  <ListItem mb="12px">
+                  <ListItem mb='12px'>
                     Повышение стоимости жилья на 12 %
                   </ListItem>
                   <ListItem>Больше рабочих мест в районе</ListItem>
@@ -161,104 +164,101 @@ function MM2010() {
 
             <Image
               src={MMLightBox}
-              position="absolute"
-              bottom="-53px"
-              right="50px"
-              w="200px"
-              h="350px"
+              position='absolute'
+              bottom='-53px'
+              right='50px'
+              w='200px'
+              h='350px'
             />
           </Flex>
           <Flex
-            mt="30px"
+            mt='30px'
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
-            flexWrap="wrap"
-            gap="20px"
-            maxW="1180px"
-            ml="auto"
-            mr="auto"
-          >
+            flexWrap='wrap'
+            gap='20px'
+            maxW='1180px'
+            ml='auto'
+            mr='auto'>
             {statistics1.map((box, index) => (
               <Box
                 key={index}
-                w="380px"
-                h="218px"
-                bg="#F9F9F9"
-                borderRadius="16px"
-                boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-              >
-                <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                  <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
+                minW='380px'
+                h='218px'
+                bg='#F9F9F9'
+                borderRadius='16px'
+                boxShadow='0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)'
+                flex='1'>
+                <Box w='100%' h='120px' bg='white' p='20px' borderRadius='16px'>
+                  <Box fontFamily='Unbounded' fontWeight='600' fontSize='30px'>
                     {box.title}
                   </Box>
-                  <Box fontFamily="Manrope" fontSize="16px">
+                  <Box fontFamily='Manrope' fontSize='16px'>
                     {box.title2}
                   </Box>
                 </Box>
 
                 <Box
-                  fontFamily="Manrope"
-                  fontSize="16px"
-                  color="#6C6C6C"
-                  p="20px"
-                >
-                  {box.description}
+                  fontFamily='Manrope'
+                  fontSize='16px'
+                  color='#6C6C6C'
+                  p='20px'>
+                  <Highlight
+                    query='1 место'
+                    styles={{ py: "1", fontWeight: "bold" }}>
+                    {box.description}
+                  </Highlight>
                 </Box>
               </Box>
             ))}
           </Flex>
         </Box>
 
-        <Box mt="30px">
-          <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-            <Flex mb="25px" gap="10px" alignItems="center">
+        <Box mt='30px'>
+          <Center fontFamily='Unbounded' fontWeight='600' fontSize='20px'>
+            <Flex mb='25px' gap='10px' alignItems='center'>
               <Image src={HeartRed} />
-              <Box color="#D34040">КОМФОРТНЕЕ</Box>
+              <Box color='#D34040'>КОМФОРТНЕЕ</Box>
             </Flex>
           </Center>
           <Box
-            maxW="1180px"
-            maxH="175px"
-            borderRadius="16px"
-            bg="#3C3B3B"
-            p="15px"
-          >
+            maxW='1180px'
+            maxH='175px'
+            borderRadius='16px'
+            bg='#3C3B3B'
+            p='15px'>
             <Flex
               // justifyContent="space-between"
-              alignItems="center"
-              h="85%"
-            >
-              <Box w="199px" h="131px">
+              alignItems='center'
+              h='85%'>
+              <Box w='199px' h='131px'>
                 <Box
-                  w="199px"
-                  h="105px"
-                  color="#FFFFFF"
-                  fontFamily="Unbounded"
-                  fontWeight="600"
-                  fontSize="24px"
-                >
+                  w='199px'
+                  h='105px'
+                  color='#FFFFFF'
+                  fontFamily='Unbounded'
+                  fontWeight='600'
+                  fontSize='24px'>
                   Новые турникеты на всех станциях
                 </Box>
               </Box>
               <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="white"
-                gap="20px"
-                justifyContent="space-between"
-                alignItems="center"
-                h="100%"
-                lineHeight="19.2px"
-                ml="30px"
-              >
+                fontFamily='Manrope'
+                fontSize='16px'
+                color='white'
+                gap='20px'
+                justifyContent='space-between'
+                alignItems='center'
+                h='100%'
+                lineHeight='19.2px'
+                ml='30px'>
                 <Box
-                  fontFamily="Manrope"
-                  fontSize="16px"
-                  color="white"
-                  gap="20px"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  lineHeight="19.2px"
-                >
+                  fontFamily='Manrope'
+                  fontSize='16px'
+                  color='white'
+                  gap='20px'
+                  justifyContent='space-between'
+                  alignItems='center'
+                  lineHeight='19.2px'>
                   Мы заменили турникеты на всех станциях метро и МЦК, при оплате
                   банковской картой они срабатывают более чем в 2 раза, а по
                   биометрии - в 3 раза быстрее.
@@ -268,39 +268,36 @@ function MM2010() {
                   СБП.
                 </Box>
               </Box>
-              <Image src={Turniket} mt="-38px" mr="-30px" />
+              <Image src={Turniket} mt='-38px' mr='-30px' />
             </Flex>
           </Box>
           <Flex
-            mt="30px"
+            mt='30px'
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
-            flexWrap="wrap"
-            gap="20px"
-          >
+            flexWrap='wrap'
+            gap='20px'>
             {statistics2.map((box, index) => (
               <Box
                 key={index}
-                w="380px"
-                h="218px"
-                bg="#F9F9F9"
-                borderRadius="16px"
-                boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-              >
-                <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                  <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
+                w='380px'
+                h='218px'
+                bg='#F9F9F9'
+                borderRadius='16px'
+                boxShadow='0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)'>
+                <Box w='100%' h='120px' bg='white' p='20px' borderRadius='16px'>
+                  <Box fontFamily='Unbounded' fontWeight='600' fontSize='30px'>
                     {box.title}
                   </Box>
-                  <Box fontFamily="Manrope" fontSize="16px">
+                  <Box fontFamily='Manrope' fontSize='16px'>
                     {box.title2}
                   </Box>
                 </Box>
 
                 <Box
-                  fontFamily="Manrope"
-                  fontSize="16px"
-                  color="#6C6C6C"
-                  p="20px"
-                >
+                  fontFamily='Manrope'
+                  fontSize='16px'
+                  color='#6C6C6C'
+                  p='20px'>
                   {box.description}
                 </Box>
               </Box>
@@ -308,65 +305,61 @@ function MM2010() {
           </Flex>
         </Box>
 
-        <Box mt="30px">
-          <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-            <Flex mb="25px" gap="10px" alignItems="center">
+        <Box mt='30px'>
+          <Center fontFamily='Unbounded' fontWeight='600' fontSize='20px'>
+            <Flex mb='25px' gap='10px' alignItems='center'>
               {/* <ShieldRed /> */}
               <Image src={ShieldRed} />
-              <Box color="#D34040">БЕЗОПАСНЕЕ</Box>
+              <Box color='#D34040'>БЕЗОПАСНЕЕ</Box>
             </Flex>
           </Center>
           <Flex
-            maxW="1180px"
-            maxH="175px"
-            borderRadius="16px"
-            bg="#FFFFFF"
-            shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
-          >
+            maxW='1180px'
+            maxH='175px'
+            borderRadius='16px'
+            bg='#FFFFFF'
+            shadow='0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A'>
             <Image src={Station} />
-            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-              <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
+            <Box w='100%' h='120px' bg='white' p='20px' borderRadius='16px'>
+              <Box fontFamily='Unbounded' fontWeight='600' fontSize='30px'>
                 ХХХХХХ
               </Box>
-              <Box fontFamily="Manrope" fontSize="16px">
+              <Box fontFamily='Manrope' fontSize='16px'>
                 была реконструирована в ХХХХ году
               </Box>
-              <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C">
+              <Box fontFamily='Manrope' fontSize='16px' color='#6C6C6C'>
                 Всего на Арбатско-Покровской линии было реконструировано ХХ
                 станций
               </Box>
             </Box>
           </Flex>
           <Flex
-            mt="30px"
+            mt='30px'
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
-            flexWrap="wrap"
-            gap="20px"
-          >
+            flexWrap='wrap'
+            gap='20px'>
             {statistics3.map((box, index) => (
               <Box
                 key={index}
-                w="380px"
-                h="218px"
-                bg="#F9F9F9"
-                borderRadius="16px"
-                boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-              >
-                <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                  <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
+                w='380px'
+                h='218px'
+                bg='#F9F9F9'
+                borderRadius='16px'
+                boxShadow='0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)'>
+                <Box w='100%' h='120px' bg='white' p='20px' borderRadius='16px'>
+                  <Box fontFamily='Unbounded' fontWeight='600' fontSize='30px'>
                     {box.title}
                   </Box>
-                  <Box fontFamily="Manrope" fontSize="16px">
+                  <Box fontFamily='Manrope' fontSize='16px'>
                     {box.title2}
                   </Box>
                 </Box>
 
                 <Box
-                  fontFamily="Manrope"
-                  fontSize="16px"
-                  color="#6C6C6C"
-                  p="20px"
-                >
+                  fontFamily='Manrope'
+                  fontSize='16px'
+                  color='#6C6C6C'
+                  p='20px'>
                   {box.description}
                 </Box>
               </Box>

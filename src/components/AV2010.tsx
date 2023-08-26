@@ -25,9 +25,26 @@ import HeartRed from "./Images/HeartRed.svg";
 import ShieldRed from "./Images/ShieldRed.svg";
 import BusStation from "./Images/BusStation.svg";
 import CirclesBlue2 from "./Images/CirclesBlue2.png";
+import Card from "./Card";
 function AV2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
+  let statistics1 = [
+    {
+      title: "6",
+      title2: "автовокзалов и автостанций работает в Москве",
+      description:
+        "Просторные залы ожидания, камеры хранения и кафе. Автовокзалы полностью приспособлены для маломобильных пассажиров.",
+    },
+    {
+      title: "162",
+      title2:
+        "направления, из которых 132 внутренних и 30 международных направлений",
+      description:
+        "Популярные среди пассажиров направления: Киржач, Обнинск, Воронеж и Кинешма.",
+    },
+  ];
+
   return (
     <Container
       bg="white"
@@ -47,23 +64,21 @@ function AV2010() {
             bg="#546DC8"
             p="15px"
           >
-            <Flex
-            // justifyContent="space-between"
-            >
-              <Box w="199px" h="131px">
-                <Box
-                  w="157px"
-                  h="105px"
-                  color="#FFFFFF"
-                  fontFamily="Unbounded"
-                  fontWeight="600"
-                  fontSize="24px"
-                >
-                  Постоянно обновляемся
-                </Box>
+            <Flex alignItems="center">
+              <Box
+                w="360px"
+                color="#FFFFFF"
+                fontFamily="Unbounded"
+                fontWeight="600"
+                fontSize="24px"
+                lineHeight="120%"
+                h="100%"
+              >
+                Постоянно обновляемся
               </Box>
               <Box>
                 <Flex
+                  w="530px"
                   fontFamily="Manrope"
                   fontSize="16px"
                   color="white"
@@ -77,7 +92,7 @@ function AV2010() {
                   закончим работы на автостанции «Красногвардейская».
                 </Flex>
               </Box>
-              <Image src={BusStation} mt="-134px" />
+              <Image src={BusStation} mt="-134px" mr="0px" />
             </Flex>
           </Box>
           <Flex
@@ -85,60 +100,18 @@ function AV2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  6
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  автовокзалов и автостанций работает в Москве
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Просторные залы ожидания, камеры хранения и кафе. Автовокзалы
-                полностью приспособлены для маломобильных пассажиров.
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  162
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  направления, из которых 132 внутренних и 30 международных
-                  направлений
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Популярные среди пассажиров направления: Киржач, Обнинск,
-                Воронеж и Кинешма.
-              </Box>
-            </Box>
+            {statistics1.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
         </Box>
       </Box>

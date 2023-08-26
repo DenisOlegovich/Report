@@ -5,6 +5,7 @@ function Card(box: { title: string; title2: string; description: string }) {
   return (
     <Box
       minW="380px"
+      maxW="570px"
       h="218px"
       bg="#F9F9F9"
       borderRadius="16px"
@@ -21,7 +22,10 @@ function Card(box: { title: string; title2: string; description: string }) {
       </Box>
 
       <Box fontFamily="Manrope" fontSize="16px" color="#6C6C6C" p="20px">
-        <Highlight query="1 место" styles={{ py: "1", fontWeight: "bold" }}>
+        <Highlight
+          query={["1 место", "6 суток"]}
+          styles={{ py: "1", fontWeight: "bold" }}
+        >
           {box.description}
         </Highlight>
       </Box>

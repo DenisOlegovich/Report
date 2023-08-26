@@ -25,9 +25,50 @@ import Carsh from "./Images/Carsh.svg";
 import Scooter from "./Images/Scooter.svg";
 import Sharing from "./Images/Sharing.svg";
 import CirclesGrey from "./Images/CirclesGrey.png";
+import Card from "./Card";
 function SHS2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
+  let statistics1 = [
+    {
+      title: "7,2 тыс.",
+      title2: "прокатных велосипедов в Москве",
+      description:
+        "Для аренды жителям Москвы и гостям столицы доступны механические и электро велосипеды",
+    },
+    {
+      title: "754 станции",
+      title2: "проката велосипедов в Москве",
+      description:
+        "6 суток в год экономит пассажир в дороге. Время в пути сократилось на 21%, от МКАД до центра быстрее на 14 минут",
+    },
+  ];
+  let statistics2 = [
+    {
+      title: "30 тыс.",
+      title2: "автомобилей в парке каршеринга",
+      description: "1 место в мире по крупнейшему парку каршеринга",
+    },
+    {
+      title: "5",
+      title2: "поездок на 1 автомобиль каршеринга в сутки",
+      description: "Каршеринг помогает разгружать дороги столицы",
+    },
+  ];
+  let statistics3 = [
+    {
+      title: "60 тыс.",
+      title2: "прокатных самокатов в Москве",
+      description:
+        "Самокаты помогают горожанам добираться до дома от станции метро или остановок наземного транспорта",
+    },
+    {
+      title: "80%",
+      title2: "сессий - это поездки с транспортной целью",
+      description:
+        "Самокаты получили правовой статус и стали популярными транспортными средствами",
+    },
+  ];
   return (
     <Container
       bg="white"
@@ -36,20 +77,19 @@ function SHS2010() {
       backgroundRepeat="no-repeat"
     >
       <Box maxW="1280px" mt="30px" p="30px" m="0 auto">
-        <Center fontFamily="Manrope" fontSize="20px" pt="35px">
+        <Center fontFamily="Manrope" fontSize="20px" mt="35px">
           с 2010 года
         </Center>
-        <Center fontFamily="Manrope" fontSize="20px" pt="35px">
-          В Москве появились удобные арендные средства передвижения:
+        <Center fontFamily="Manrope" fontSize="20px">
+          В МОСКВЕ ПОЯВИЛИСЬ УДОБНЫЕ СРЕДСТВА ПЕРЕДВИЖЕНИЯ:
         </Center>
         <Center fontFamily="Unbounded" fontWeight="700" fontSize="44px">
           ШЕРИНГОВЫЕ СЕРВИСЫ
         </Center>
         <Box mt="30px">
-          <Box maxW="1180px" maxH="175px" borderRadius="16px" bg="#D34040">
+          <Box maxW="1180px" maxH="201px" borderRadius="16px" bg="#D34040">
             <Flex
               maxW="1180px"
-              maxH="175px"
               borderRadius="16px"
               bg="#FFFFFF"
               shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
@@ -69,7 +109,7 @@ function SHS2010() {
             </Flex>
           </Box>
           <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-            <Flex mb="25px" gap="10px" alignItems="center">
+            <Flex gap="10px" alignItems="center" mt="40px">
               <Image src={Velo} />
               <Box color="#828282">ВЕЛОПРОКАТ (С 2013 Г.)</Box>
             </Flex>
@@ -79,62 +119,21 @@ function SHS2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  7,2 тыс.
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  прокатных велосипедов в Москве
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Для аренды жителям Москвы и гостям столицы доступны механические
-                и электро велосипеды
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  754 станции
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  проката велосипедов в Москве
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                <b>6 суток в год</b> экономит пассажир в дороге. Время в пути
-                сократилось на 21%, от МКАД до центра быстрее на 14 минут
-              </Box>
-            </Box>
+            {statistics1.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
           <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-            <Flex mb="25px" gap="10px" alignItems="center">
+            <Flex gap="10px" alignItems="center" mt="40px">
               <Image src={Carsh} />
               <Box color="#828282">КАРШЕРИНГ (С 2015 Г.)</Box>
             </Flex>
@@ -144,61 +143,22 @@ function SHS2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  30 тыс.
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  автомобилей в парке каршеринга
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                <b>1 место</b> в мире по крупнейшему парку каршеринга
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  5
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  поездок на 1 автомобиль каршеринга в сутки
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Каршеринг помогает разгружать дороги столицы
-              </Box>
-            </Box>
+            {statistics2.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
 
           <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-            <Flex mb="25px" gap="10px" alignItems="center">
+            <Flex gap="10px" alignItems="center" mt="40px">
               <Image src={Scooter} />
               <Box color="#828282">КИКШЕРИНГ (С 2018 Г.)</Box>
             </Flex>
@@ -208,59 +168,18 @@ function SHS2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  60 тыс.
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  прокатных самокатов в Москве
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Самокаты помогают горожанам добираться до дома от станции метро
-                или остановок наземного транспорта
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  80%
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  сессий - это поездки с транспортной целью
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Самокаты получили правовой статус и стали популярными
-                транспортными средствами
-              </Box>
-            </Box>
+            {statistics3.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
         </Box>
       </Box>

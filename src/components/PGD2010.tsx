@@ -26,9 +26,64 @@ import ShieldYellow from "./Images/ShieldYellow.svg";
 import Train from "./Images/Train.svg";
 import CirclesOrange from "./Images/CirclesOrange.png";
 import Station2 from "./Images/Station2.svg";
+import Card from "./Card";
 function PGD2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
+  let statistics1 = [
+    {
+      title: "ХХ станций",
+      title2: "открылось в вашем районе",
+      description:
+        "Время в пути для жителей столицы сократилось до 52%, области - до 38%",
+    },
+    {
+      title: "5-7 минут",
+      title2: "интервал движения поездов в час пик",
+      description:
+        "МЦД-1 и МЦД-2 создали множество новых вариантов маршрутов в Москве и области",
+    },
+    {
+      title: "на 70%",
+      title2: "чаще стали ходить поезда на направлениях с открытием МЦД",
+      description:
+        "На направлении стало больше поездов, сократились интервал движения",
+    },
+  ];
+  let statistics2 = [
+    {
+      title: "до 12%",
+      title2: "составляет разгрузка линий метро",
+      description: "Благодаря МЦД поездки на метро тоже становятся комфортнее",
+    },
+    {
+      title: "100%",
+      title2: "вагонов МЦД - это обновленные подвижные составы",
+      description:
+        "1 место в России по темпам обновления ЖД поездов среди мегаполисов",
+    },
+    {
+      title: "до 75%",
+      title2:
+        "дешевле стал проезд на направлениях для жителей Московской области",
+      description:
+        "С МЦД поездки стали дешевле, а пересадки на метро и МЦК - бесплатными",
+    },
+  ];
+  let statistics3 = [
+    {
+      title: "100%",
+      title2: "бактерий и вирусов уничтожает система очистки воздуха",
+      description:
+        'В поездах "Иволга" постоянно работает современная система очистки воздуха.',
+    },
+    {
+      title: "до 11",
+      title2: "камер установлено в каждом вагоне",
+      description:
+        "Видеонаблюдение помогает нам обеспечивать безопасность пассажиров в транспорте",
+    },
+  ];
   return (
     <Container
       bg="white"
@@ -77,85 +132,18 @@ function PGD2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  ХХ станций
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  открылось в вашем районе
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Время в пути для жителей столицы сократилось до 52%, области -
-                до 38%
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  5-7 минут
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  интервал движения поездов в час пик
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                МЦД-1 и МЦД-2 создали множество новых вариантов маршрутов в
-                Москве и области
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  на 70%
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  чаще стали ходить поезда на направлениях с открытием МЦД
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                На направлении стало больше поездов, сократились интервал
-                движения
-              </Box>
-            </Box>
+            {statistics1.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
         </Box>
 
@@ -221,85 +209,18 @@ function PGD2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  до 12%
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  составляет разгрузка линий метро
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Благодаря МЦД поездки на метро тоже становятся комфортнее
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  100%
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  вагонов МЦД - это обновленные подвижные составы
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                <b>1 место</b> в России по темпам обновления ЖД поездов среди
-                мегаполисов
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  до 75%
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  дешевле стал проезд на направлениях для жителей Московской
-                  области
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                С МЦД поездки стали дешевле, а пересадки на метро и МЦК -
-                бесплатными
-              </Box>
-            </Box>
+            {statistics1.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
         </Box>
 
@@ -317,59 +238,18 @@ function PGD2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  100%
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  бактерий и вирусов уничтожает система очистки воздуха
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                В поездах "Иволга" постоянно работает современная система
-                очистки воздуха.
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  до 11
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  камер установлено в каждом вагоне
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Видеонаблюдение помогает нам обеспечивать безопасность
-                пассажиров в транспорте
-              </Box>
-            </Box>
+            {statistics1.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
         </Box>
       </Box>

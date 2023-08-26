@@ -185,14 +185,14 @@ function MM2010() {
             ml="auto"
             mr="auto"
           >
-            {/* {statistics1.map((box, index) => (
+            {statistics1.map((box, index) => (
               <Card
                 key={index}
                 title={box.title}
                 title2={box.title2}
                 description={box.description}
               />
-            ))} */}
+            ))}
           </Flex>
         </Box>
 
@@ -266,32 +266,12 @@ function MM2010() {
             gap="20px"
           >
             {statistics2.map((box, index) => (
-              <Box
+              <Card
                 key={index}
-                w="380px"
-                h="218px"
-                bg="#F9F9F9"
-                borderRadius="16px"
-                boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-              >
-                <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                  <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                    {box.title}
-                  </Box>
-                  <Box fontFamily="Manrope" fontSize="16px">
-                    {box.title2}
-                  </Box>
-                </Box>
-
-                <Box
-                  fontFamily="Manrope"
-                  fontSize="16px"
-                  color="#6C6C6C"
-                  p="20px"
-                >
-                  {box.description}
-                </Box>
-              </Box>
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
             ))}
           </Flex>
         </Box>
@@ -332,32 +312,12 @@ function MM2010() {
             gap="20px"
           >
             {statistics3.map((box, index) => (
-              <Box
+              <Card
                 key={index}
-                w="380px"
-                h="218px"
-                bg="#F9F9F9"
-                borderRadius="16px"
-                boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-              >
-                <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                  <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                    {box.title}
-                  </Box>
-                  <Box fontFamily="Manrope" fontSize="16px">
-                    {box.title2}
-                  </Box>
-                </Box>
-
-                <Box
-                  fontFamily="Manrope"
-                  fontSize="16px"
-                  color="#6C6C6C"
-                  p="20px"
-                >
-                  {box.description}
-                </Box>
-              </Box>
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
             ))}
           </Flex>
         </Box>

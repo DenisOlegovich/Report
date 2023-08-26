@@ -28,58 +28,66 @@ import Validator from "./Images/Validator.svg";
 import Tram from "./Images/Tram.svg";
 import Troll from "./Images/Troll.svg";
 import { url } from "inspector";
+import Card from "./Card";
 function NT2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
   let statistics1 = [
     {
-      title: "",
-      title2: "",
-      description: "",
+      title: "441 км",
+      title2: "выделенных полос",
+      description: "1 место в России по количеству введенных выделенных полос",
     },
     {
-      title: "",
-      title2: "",
-      description: "",
+      title: "на ХХ",
+      title2:
+        "единиц подвижного состава ежедневно выходят на линию в вашем районе",
+      description:
+        "Благодаря этому время ожидания в среднем сократилось на ХХ минут",
     },
     {
-      title: "",
-      title2: "",
-      description: "",
+      title: "ХХ км",
+      title2: "выделенных полос в вашем районе",
+      description:
+        "Скорость движения растет, а аварийность снижается на 30-40%",
     },
   ];
   let statistics2 = [
     {
-      title: "",
-      title2: "",
-      description: "",
+      title: "ХХ",
+      title2:
+        "дополнительных маршрутов наземного транспорта организовано в вашем районе",
+      description:
+        'Новая сеть маршрутов "Магистраль" с интервальным движением автобусов',
     },
     {
-      title: "",
-      title2: "",
-      description: "",
+      title: "ХХ",
+      title2: "новых остановок появилось в вашем районе",
+      description: "Всего мы установили более 6 тыс. остановок нового типа",
     },
     {
-      title: "",
-      title2: "",
-      description: "",
+      title: "100%",
+      title2: "автобусов в Москве обновлено",
+      description: "1 место в Европе по модернизированному парку",
     },
   ];
   let statistics3 = [
     {
-      title: "",
-      title2: "",
-      description: "",
+      title: "на 20%",
+      title2: "тише движение трамвайных путей благодаря модернизации",
+      description:
+        "Проводим ремонт только в выходные и без полного перекрытия движения",
     },
     {
-      title: "",
-      title2: "",
-      description: "",
+      title: "70%",
+      title2: "трамвайных путей отделены от автодороги",
+      description:
+        "На 35% сократилось количество задержек из-за аварий на путях",
     },
     {
-      title: "",
-      title2: "",
-      description: "",
+      title: "100%",
+      title2: "подвижного состава оснащено системой «Антисон»",
+      description: "Система отслеживает состояние водителя в реальном времени",
     },
   ];
   return (
@@ -135,83 +143,18 @@ function NT2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  441 км
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  выделенных полос
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                <b>1 место</b> в России по количеству введенных выделенных полос
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  на ХХ
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  единиц подвижного состава ежедневно выходят на линию в вашем
-                  районе
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Благодаря этому время ожидания в среднем сократилось на ХХ минут
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  ХХ км
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  выделенных полос в вашем районе
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Скорость движения растет, а аварийность снижается на 30-40%
-              </Box>
-            </Box>
+            {statistics1.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
         </Box>
 
@@ -280,84 +223,18 @@ function NT2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  ХХ
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  дополнительных маршрутов наземного транспорта организовано в
-                  вашем районе
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Новая сеть маршрутов "Магистраль" с интервальным движением
-                автобусов
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  ХХ
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  новых остановок появилось в вашем районе
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Всего мы установили более 6 тыс. остановок нового типа
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  100%
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  автобусов в Москве обновлено
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                1 место в Европе по модернизированному парку
-              </Box>
-            </Box>
+            {statistics2.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
         </Box>
 
@@ -415,83 +292,18 @@ function NT2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  на 20%
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  тише движение трамвайных путей благодаря модернизации
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Проводим ремонт только в выходные и без полного перекрытия
-                движения
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  70%
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  трамвайных путей отделены от автодороги
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                На 35% сократилось количество задержек из-за аварий на путях
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  100%
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  подвижного состава оснащено системой «Антисон»
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Система отслеживает состояние водителя в реальном времени
-              </Box>
-            </Box>
+            {statistics3.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
         </Box>
       </Box>

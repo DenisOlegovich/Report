@@ -28,9 +28,72 @@ import CirclesParking from "./Images/CirclesParking.png";
 import Road from "./Images/Road.svg";
 import LogoParking from "./Images/LogoParking.svg";
 import Cameras from "./Images/Cameras.svg";
+import Card from "./Card";
 function DD2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
+  let statistics1 = [
+    {
+      title: "55 км/ч",
+      title2: "средняя скорость личного транспорта на основных магистралях",
+      description: "Средняя скорость движения выросла на 22% или на 10 км/ч",
+    },
+    {
+      title: "53 минуты",
+      title2: "время в пути от МКАД до центра города на городском транспорте",
+      description:
+        "6 суток в год экономит пассажир в дороге. Время в пути сократилось на 21%, от МКАД до центра быстрее на 14 минут",
+    },
+  ];
+  let statistics2 = [
+    {
+      title: "до 30%",
+      title2:
+        "разгрузятся участки Садового кольца, МКАД, ТТК после полного ввода МСД",
+      description:
+        "Благодаря скоростному диаметру на дорогах станет еще свободнее",
+    },
+    {
+      title: "для 4,5 млн",
+      title2:
+        "жителей, проживающих в 48 районах, улучшилась транспортная доступность",
+      description: "Перемещаться по Москве стало удобнее и быстрее",
+    },
+  ];
+  let statistics3 = [
+    {
+      title: "ХХХХ",
+      title2: 'платных парковочных мест в районах "ХХХ" и "ХХХ"',
+      description:
+        "Благодаря платным парковкам растет оборачиваемость парковочных мест и вы можете быстрее найти свободное место",
+    },
+    {
+      title: "более 10 тыс.",
+      title2: "парковочных мест для людей с ограниченными возможностями",
+      description:
+        "Специальные широкие и удобные места, которые составляют не менее 10% мест на каждой парковке",
+    },
+    {
+      title: "более 80",
+      title2: "перехватывающих парковок обустроено в Москве",
+      description:
+        "Водители могут бесплатно припарковаться, если затем совершают не менее двух поездок на метро, МЦК или МЦД",
+    },
+  ];
+  let statistics4 = [
+    {
+      title: "на 34%",
+      title2: "меньше ДТП в Москве по сравнению с 2010 годом",
+      description: "2,5 тысяч жизней сохранено с 2010 года",
+    },
+    {
+      title: "3,8 тыс.",
+      title2: "камер установлено на дорогах Москвы",
+      description:
+        "Благодаря системе фотовидеофиксации водители становятся ответственнее, а дороги - безопаснее",
+    },
+  ];
+
   return (
     <Container
       bg="white"
@@ -59,65 +122,28 @@ function DD2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  55 км/ч
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  средняя скорость личного транспорта на основных магистралях
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Средняя скорость движения выросла на 22% или на 10 км/ч
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  53 минуты
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  время в пути от МКАД до центра города на городском транспорте
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                <b>6 суток в год</b> экономит пассажир в дороге. Время в пути
-                сократилось на 21%, от МКАД до центра быстрее на 14 минут
-              </Box>
-            </Box>
+            {statistics1.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
           <Flex
             maxW="1180px"
-            maxH="259px"
+            h="259px"
             borderRadius="16px"
             bg="#FFFFFF"
             shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
+            mt="20px"
+            ml="auto"
+            mr="auto"
           >
             <Image src={Road} />
             <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
@@ -136,59 +162,18 @@ function DD2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  до 30%
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  разгрузятся участки Садового кольца, МКАД, ТТК после полного
-                  ввода МСД
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Благодаря скоростному диаметру на дорогах станет еще свободнее
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  для 4,5 млн
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  жителей, проживающих в 48 районах, улучшилась транспортная
-                  доступность
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Перемещаться по Москве стало удобнее и быстрее
-              </Box>
-            </Box>
+            {statistics2.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
         </Box>
 
@@ -209,37 +194,43 @@ function DD2010() {
             bgImage={CirclesParking}
             backgroundPosition="right"
             backgroundRepeat="no-repeat"
+            ml="auto"
+            mr="auto"
           >
             <Flex
             // justifyContent="space-between"
             >
-              <Box w="199px" h="131px">
-                <Box
-                  w="157px"
-                  h="105px"
-                  color="#FFFFFF"
-                  fontFamily="Unbounded"
-                  fontWeight="600"
-                  fontSize="24px"
-                >
-                  Мобильное приложение Парковки России
-                </Box>
+              <Box
+                w="426px"
+                h="105px"
+                color="#FFFFFF"
+                fontFamily="Unbounded"
+                fontWeight="600"
+                fontSize="24px"
+                p="13px 42px 13px 0px"
+                lineHeight="120%"
+              >
+                Мобильное приложение Парковки России
               </Box>
               <Box>
-                <Flex
+                <Center
                   fontFamily="Manrope"
                   fontSize="16px"
                   color="white"
                   gap="20px"
-                  justifyContent="space-between"
-                  alignItems="center"
                   h="100%"
                   lineHeight="19.2px"
+                  flexDirection="column"
                 >
-                  Удобное приложение для парковок «Парковки России», 95%
-                  парковочных сессий оплачиваются в нем. Платиновый призер AVA
-                  Digital Awards 2022 в номинации «Приложение для информации»
-                </Flex>
+                  <Box>
+                    Удобное приложение для парковок «Парковки России», 95%
+                    парковочных сессий оплачиваются в нем.
+                  </Box>
+                  <Box>
+                    Платиновый призер AVA Digital Awards 2022 в номинации
+                    «Приложение для информации»
+                  </Box>
+                </Center>
               </Box>
               <Image src={LogoParking} mt="-85px" />
             </Flex>
@@ -249,85 +240,18 @@ function DD2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  ХХХХ
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  платных парковочных мест в районах "ХХХ" и "ХХХ"
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Благодаря платным парковкам растет оборачиваемость парковочных
-                мест и вы можете быстрее найти свободное место
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  более 10 тыс.
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  парковочных мест для людей с ограниченными возможностями
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Специальные широкие и удобные места, которые составляют не менее
-                10% мест на каждой парковке
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  более 80
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  перехватывающих парковок обустроено в Москве
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Водители могут бесплатно припарковаться, если затем совершают не
-                менее двух поездок на метро, МЦК или МЦД
-              </Box>
-            </Box>
+            {statistics3.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
         </Box>
 
@@ -345,39 +269,44 @@ function DD2010() {
             borderRadius="16px"
             bg="#396522"
             p="15px"
+            ml="auto"
+            mr="auto"
           >
             <Flex
             // justifyContent="space-between"
             >
-              <Box w="199px" h="131px">
-                <Box
-                  w="157px"
-                  h="105px"
-                  color="#FFFFFF"
-                  fontFamily="Unbounded"
-                  fontWeight="600"
-                  fontSize="24px"
-                >
-                  Интеллектуальная транспортная система
-                </Box>
-              </Box>
-              <Box>
-                <Flex
-                  fontFamily="Manrope"
-                  fontSize="16px"
-                  color="white"
-                  gap="20px"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  h="100%"
-                  lineHeight="19.2px"
-                >
+              <Center
+                w="360px"
+                color="#FFFFFF"
+                fontFamily="Unbounded"
+                fontWeight="600"
+                fontSize="24px"
+                p="0px 42px 13px 0px"
+                lineHeight="120%"
+              >
+                Интеллектуальная транспортная система
+              </Center>
+
+              <Center
+                fontFamily="Manrope"
+                fontSize="16px"
+                color="white"
+                gap="20px"
+                h="100%"
+                lineHeight="19.2px"
+                flexDirection="column"
+                mt="auto"
+                mb="auto"
+              >
+                <Box>
                   ИТС - это единая система управления дорожным движением,
-                  сведения из которой поступают в Ситуационный центр Система
-                  объединяет работу городских камер, камер фотовидеофиксации,
-                  дорожных детекторов и светофоров
-                </Flex>
-              </Box>
+                  сведения из которой поступают в Ситуационный центр
+                </Box>
+                <Box>
+                  Система объединяет работу городских камер, камер
+                  фотовидеофиксации, дорожных детекторов и светофоров
+                </Box>
+              </Center>
               <Image src={Cameras} mt="-124px" />
             </Flex>
           </Box>
@@ -386,58 +315,18 @@ function DD2010() {
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
             flexWrap="wrap"
             gap="20px"
+            maxW="1180px"
+            ml="auto"
+            mr="auto"
           >
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  на 34%
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  меньше ДТП в Москве по сравнению с 2010 годом
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                2,5 тысяч жизней сохранено с 2010 года
-              </Box>
-            </Box>
-            <Box
-              w="380px"
-              h="218px"
-              bg="#F9F9F9"
-              borderRadius="16px"
-              boxShadow="0px 0px 4px rgba(0, 0, 0, 0.04), 0px 4px 8px rgba(0, 0, 0, 0.06)"
-            >
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
-                  3,8 тыс.
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  камер установлено на дорогах Москвы
-                </Box>
-              </Box>
-
-              <Box
-                fontFamily="Manrope"
-                fontSize="16px"
-                color="#6C6C6C"
-                p="20px"
-              >
-                Благодаря системе фотовидеофиксации водители становятся
-                ответственнее, а дороги - безопаснее
-              </Box>
-            </Box>
+            {statistics4.map((box, index) => (
+              <Card
+                key={index}
+                title={box.title}
+                title2={box.title2}
+                description={box.description}
+              />
+            ))}
           </Flex>
         </Box>
       </Box>

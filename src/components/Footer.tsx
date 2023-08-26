@@ -17,6 +17,7 @@ function Footer() {
   const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
   const [isFixed, setIsFixed] = useState(false);
 
+  /// 12345
   useEffect(() => {
     const handleScroll = () => {
       setIsFixed(window.innerHeight >= document.body.offsetHeight);

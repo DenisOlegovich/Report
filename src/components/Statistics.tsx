@@ -14,7 +14,7 @@ import ReportAuthorization from "./ReportAuthorization";
 import NavbarStatistics from "./NavbarStatistics";
 import StatisticsOutput from "./StatisticsOutput";
 function Statistics() {
-  const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
+  const [isSmallerThan700] = useMediaQuery("(max-width: 700px)");
 
   return (
     <Container bg="#F9F9F9" m="0 auto">
@@ -26,10 +26,8 @@ function Statistics() {
           m="0 auto"
         >
           <Box
-            w="571"
-            h="53"
             fontFamily="Unbounded"
-            fontSize="44"
+            fontSize={isSmallerThan700 ? "26" : "44"}
             fontWeight="600"
             margin="0 auto"
           >

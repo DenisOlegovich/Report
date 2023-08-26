@@ -108,13 +108,22 @@ function PGD2010() {
           </Center>
           <Flex
             maxW="1180px"
-            maxH="194px"
             borderRadius="16px"
             bg="#FFFFFF"
             shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
+            justifyContent={isSmallerThan1200 ? "center" : "space-between"}
+            flexWrap="wrap"
+            m="0 auto"
+            w="auto"
           >
             <Image src={Station2} />
-            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
+            <Box
+              w={isSmallerThan1200 ? "" : "350px"}
+              bg="white"
+              p="15px"
+              borderRadius="16px"
+              m="0 auto"
+            >
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
                 Курьяново
               </Box>
@@ -213,7 +222,7 @@ function PGD2010() {
             ml="auto"
             mr="auto"
           >
-            {statistics1.map((box, index) => (
+            {statistics2.map((box, index) => (
               <Card
                 key={index}
                 title={box.title}
@@ -242,7 +251,7 @@ function PGD2010() {
             ml="auto"
             mr="auto"
           >
-            {statistics1.map((box, index) => (
+            {statistics3.map((box, index) => (
               <Card
                 key={index}
                 title={box.title}

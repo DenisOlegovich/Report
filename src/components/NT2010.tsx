@@ -24,7 +24,7 @@ import ClockBlue from "./Images/ClockBlue.svg";
 import HeartBlue from "./Images/HeartBlue.svg";
 import ShieldBlue from "./Images/ShieldBlue.svg";
 import CirclesBlue from "./Images/CirclesBlue.png";
-import Validator from "./Images/Validator.svg";
+import Validator from "./Images/Validator.png";
 import Tram from "./Images/Tram.svg";
 import Troll from "./Images/Troll.svg";
 import { url } from "inspector";
@@ -115,17 +115,22 @@ function NT2010() {
           </Center>
           <Flex
             maxW="1180px"
-            maxH="302px"
             borderRadius="16px"
             bg="#FFFFFF"
             shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
+            justifyContent={isSmallerThan1200 ? "center" : "space-between"}
+            flexWrap="wrap"
           >
             <Image src={Validator} />
-            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
+            <Box
+              p="15px"
+              borderRadius="16px"
+              w={isSmallerThan1200 ? "" : "350px"}
+            >
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="24px">
                 Пассажиры стали экономить до 25 минут в день
               </Box>
-              <UnorderedList w="343.5px">
+              <UnorderedList>
                 <ListItem>
                   Мы отменили турникеты, вход в автобус стал возможен через все
                   двери;
@@ -166,58 +171,54 @@ function NT2010() {
               <Box color="#6180EC">КОМФОРТНЕЕ</Box>
             </Flex>
           </Center>
-          <Box
+          <Flex
             maxW="1180px"
-            maxH="175px"
             borderRadius="16px"
             bg="#61B2EC"
             p="15px"
             bgImage={Tram}
-            backgroundPosition="right"
+            backgroundPosition="right bottom"
             backgroundRepeat="no-repeat"
+            alignItems="center"
+            flexWrap="wrap"
+            pr="250px"
+            m="0 auto"
           >
-            <Flex
-            // justifyContent="space-between"
+            <Box
+              w="250px"
+              color="#FFFFFF"
+              fontFamily="Unbounded"
+              fontWeight="600"
+              fontSize="24px"
+              p="13px 42px 13px 0px"
+              lineHeight="120%"
             >
-              <Box w="199px" h="131px">
-                <Box
-                  w="157px"
-                  h="105px"
-                  color="#FFFFFF"
-                  fontFamily="Unbounded"
-                  fontWeight="600"
-                  fontSize="24px"
-                >
-                  Новый подвижной состав
-                </Box>
-              </Box>
-              <Box>
-                <Flex
-                  fontFamily="Manrope"
-                  fontSize="16px"
-                  color="white"
-                  gap="20px"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  h="100%"
-                  lineHeight="19.2px"
-                >
-                  <UnorderedList w="343.5px">
-                    <ListItem>плавный ход</ListItem>
-                    <ListItem>крепления для велосипедов</ListItem>
-                    <ListItem>USB-зарядки для устройств</ListItem>
-                  </UnorderedList>
-                  <UnorderedList w="343.5px">
-                    <ListItem>
-                      {" "}
-                      <ListItem>USB-зарядки для устройств</ListItem>
-                    </ListItem>
-                    <ListItem>сквозной проход</ListItem>
-                  </UnorderedList>
-                </Flex>
-              </Box>
+              Новый подвижной состав
+            </Box>
+
+            <Flex
+              fontFamily="Manrope"
+              fontSize="16px"
+              color="white"
+              justifyContent="space-between"
+              alignItems="center"
+              h="100%"
+              lineHeight="19.2px"
+              flexWrap="wrap"
+              columnGap="20px"
+            >
+              <UnorderedList>
+                <ListItem mb="12px">плавный ход</ListItem>
+                <ListItem mb="12px">крепления для велосипедов</ListItem>
+                <ListItem mb="12px">USB-зарядки для устройств</ListItem>
+              </UnorderedList>
+              <UnorderedList>
+                <ListItem mb="12px">USB-зарядки для устройств</ListItem>
+                <ListItem mb="12px">сквозной проход</ListItem>
+              </UnorderedList>
             </Flex>
-          </Box>
+          </Flex>
+
           <Flex
             mt="30px"
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}
@@ -245,48 +246,56 @@ function NT2010() {
               <Box color="#6180EC">БЕЗОПАСНЕЕ</Box>
             </Flex>
           </Center>
-          <Box
+          <Flex
             maxW="1180px"
-            h="219px"
             borderRadius="16px"
             bg="#61B2EC"
             p="15px"
             bgImage={Troll}
-            backgroundPosition="right"
+            backgroundPosition="right bottom"
             backgroundRepeat="no-repeat"
+            alignItems="center"
+            flexWrap="wrap"
+            pr="250px"
+            m="0 auto"
           >
-            <Flex>
-              <Box w="199px" h="131px">
-                <Box
-                  w="157px"
-                  h="105px"
-                  color="#FFFFFF"
-                  fontFamily="Unbounded"
-                  fontWeight="600"
-                  fontSize="24px"
-                >
-                  Новый экологичный вид транспорта
-                </Box>
-              </Box>
-              <Box fontFamily="Manrope" fontSize="16px" color="white">
+            <Box
+              w={isSmallerThan1200 ? "" : "250px"}
+              color="#FFFFFF"
+              fontFamily="Unbounded"
+              fontWeight="600"
+              fontSize="24px"
+              p="13px 42px 13px 0px"
+              lineHeight="120%"
+            >
+              Новый экологичный вид транспорта
+            </Box>
+
+            <Box
+              fontFamily="Manrope"
+              fontSize="16px"
+              color="white"
+              gap="20px"
+              justifyContent="space-between"
+              alignItems="center"
+              h="100%"
+              lineHeight="19.2px"
+              maxW="500px"
+            >
+              <Box mb="12px">
                 В 2018 году на дороги Москвы вышел первый электробус, а сейчас
                 их уже 1055, и они работают на 79 маршрутах:
-                <Flex
-                  gap="20px"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  h="100%"
-                  lineHeight="19.2px"
-                >
-                  <UnorderedList w="343.5px">
-                    <ListItem>не загрязняют окружающую среду</ListItem>
-                    <ListItem>работают на 30% тише автобуса</ListItem>
-                    <ListItem>запас хода после подзарядки около 80 км</ListItem>
-                  </UnorderedList>
-                </Flex>
               </Box>
-            </Flex>
-          </Box>
+
+              <UnorderedList>
+                <ListItem mb="12px">не загрязняют окружающую среду</ListItem>
+                <ListItem mb="12px">работают на 30% тише автобуса</ListItem>
+                <ListItem mb="12px">
+                  запас хода после подзарядки около 80 км
+                </ListItem>
+              </UnorderedList>
+            </Box>
+          </Flex>
           <Flex
             mt="30px"
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}

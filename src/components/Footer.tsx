@@ -1,4 +1,4 @@
-import React, { useEffect, useState } from "react";
+import React, { useRef, useEffect, useState } from "react";
 import {
   Container,
   Flex,
@@ -12,62 +12,69 @@ import AppStore from "./Images/AppStore.svg";
 import GooglePlay from "./Images/GooglePlay.svg";
 import AppGallery from "./Images/AppGallery.svg";
 import LogoMTFooter from "./Images/LogoMTFooter.svg";
-
+import { ReactNode } from "react";
 function Footer() {
   const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
-  const [isFixed, setIsFixed] = useState(false);
+  const footerRef = useRef<HTMLDivElement>(null);
+  const [fixed, setFixed] = useState(false);
 
-  /// 12345
   useEffect(() => {
-    const handleScroll = () => {
-      setIsFixed(window.innerHeight >= document.body.offsetHeight);
-    };
-
-    handleScroll();
-
-    window.addEventListener("scroll", handleScroll);
-
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        setFixed(!entry.isIntersecting);
+      },
+      {
+        root: null,
+        rootMargin: "0px",
+        threshold: 0,
+      }
+    );
+    if (footerRef.current) {
+      observer.observe(footerRef.current);
+    }
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      observer.disconnect();
     };
   }, []);
   return (
     <Container
-      mt='30px'
-      w='100%'
-      h='391px'
+      mt="50px"
+      w="100%"
+      h="391px"
       bgImage={Trains}
-      backgroundPosition='right'
-      backgroundRepeat='no-repeat'
-      as='footer'
-      position={isFixed ? "fixed" : "static"}
+      backgroundPosition="right"
+      backgroundRepeat="no-repeat"
+      as="footer"
+      position={fixed ? "fixed" : "relative"}
       bottom={0}
       left={0}
-      marginTop='auto'
-      p='50px 70px'>
-      <Box position='relative' h='282px'>
-        <Box w='591px'>
+      marginTop="auto"
+      p="50px 70px"
+    >
+      <Box position="relative" h="282px">
+        <Box maxW="591px">
           <Box
-            fontFamily='Unbounded'
-            fontWeight='600'
-            fontSize='24px'
-            pb='20px'>
+            fontFamily="Unbounded"
+            fontWeight="600"
+            fontSize="24px"
+            pb="20px"
+          >
             ЖЕЛАЕМ ПРИЯТНЫХ ПОЕЗДОК!
           </Box>
-          <Text fontFamily='Manrope' fontSize='20px' pb='40px'>
+          <Text fontFamily="Manrope" fontSize="20px" pb="40px">
             Еще больше интересной статистики о ваших поездках{" "}
-            <Box as='span' color='#D34040'>
+            <Box as="span" color="#D34040">
               в приложении «Метро Москвы».
             </Box>
           </Text>
-          <Flex gap='15px'>
+          <Flex gap="15px" flexWrap="wrap">
             <Image src={AppStore} />
             <Image src={GooglePlay} />
             <Image src={AppGallery} />
           </Flex>
         </Box>
 
-        <Image src={LogoMTFooter} position='absolute' bottom='0px' />
+        <Image src={LogoMTFooter} position="absolute" bottom="0px" />
       </Box>
     </Container>
   );

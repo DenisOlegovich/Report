@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useRef, useEffect, useCallback } from "react";
 import {
   Container,
   Flex,
@@ -12,6 +12,8 @@ import {
   ListItem,
   Img,
   Highlight,
+  Text,
+  useDimensions,
 } from "@chakra-ui/react";
 // import { Swiper, SwiperSlide } from "swiper/react";
 // import "swiper/css";
@@ -40,7 +42,18 @@ import Card from "./Card";
 
 function MM2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
+  const [isSmallerThan700] = useMediaQuery("(max-width: 700px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
+  const [isSmallerThan500] = useMediaQuery("(max-width: 500px)");
+
+  const imageRef = useRef<HTMLImageElement | null>(null);
+
+  const handleImageLoad = useCallback(() => {
+    if (imageRef.current) {
+      const { clientWidth, clientHeight } = imageRef.current;
+      console.log(clientWidth);
+    }
+  }, []);
   let statistics1 = [
     {
       title: "107",
@@ -110,8 +123,12 @@ function MM2010() {
         <Center fontFamily="Manrope" fontSize="20px" pt="35px">
           с 2010 года
         </Center>
-        <Center fontFamily="Unbounded" fontWeight="700" fontSize="44px">
-          МОСКОВСКИЙ МЕТРОПОЛИТЕН
+        <Center
+          fontFamily="Unbounded"
+          fontWeight="700"
+          fontSize={isSmallerThan700 ? "26" : "44"}
+        >
+          <Box>МОСКОВСКИЙ МЕТРОПОЛИТЕН</Box>
         </Center>
         <Box mt="30px">
           <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
@@ -123,16 +140,15 @@ function MM2010() {
           </Center>
           <Flex
             maxW="1180px"
-            h="175px"
+            minH="175px"
             borderRadius="16px"
             bg="#D34040"
             m="0 auto"
             position="relative"
           >
-            <Flex p="20px" w="80%">
+            <Flex p="20px" alignItems="center" flexWrap="wrap" mr="200px">
               <Box
-                w="199px"
-                h="131px"
+                w="250px"
                 color="#FFFFFF"
                 fontFamily="Unbounded"
                 fontWeight="600"
@@ -143,37 +159,38 @@ function MM2010() {
                 Новые станции метро - это
               </Box>
 
-              <Center
+              <Flex
                 fontFamily="Manrope"
                 fontSize="16px"
                 color="white"
-                gap="20px"
                 alignItems="center"
-                h="100%"
                 lineHeight="19.2px"
                 flex="1"
-                rowGap="12px"
+                flexWrap="wrap"
+                columnGap="20px"
+                minW="350px"
               >
                 <UnorderedList>
                   <ListItem mb="12px">Новые удобные маршруты</ListItem>
-                  <ListItem>Меньше времени в пути</ListItem>
+                  <ListItem mb="12px">Меньше времени в пути</ListItem>
                 </UnorderedList>
                 <UnorderedList>
                   <ListItem mb="12px">
                     Повышение стоимости жилья на 12 %
                   </ListItem>
-                  <ListItem>Больше рабочих мест в районе</ListItem>
+                  <ListItem mb="12px">Больше рабочих мест в районе</ListItem>
                 </UnorderedList>
-              </Center>
+              </Flex>
             </Flex>
 
             <Image
               src={MMLightBox}
               position="absolute"
               bottom="-53px"
-              right="50px"
+              right="0px"
               w="200px"
               h="350px"
+              visibility={isSmallerThan500 ? "hidden" : "visible"}
             />
           </Flex>
           <Flex
@@ -196,7 +213,7 @@ function MM2010() {
           </Flex>
         </Box>
 
-        <Box mt="30px">
+        <Box mt="10px" p="20px">
           <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
             <Flex mb="25px" gap="10px" alignItems="center">
               <Image src={HeartRed} />
@@ -205,38 +222,40 @@ function MM2010() {
           </Center>
           <Box
             maxW="1180px"
-            maxH="175px"
+            minH="175px"
             borderRadius="16px"
             bg="#3C3B3B"
-            p="15px"
+            m="0 auto"
+            position="relative"
           >
             <Flex
-              // justifyContent="space-between"
+              p="20px"
               alignItems="center"
-              h="85%"
+              flexWrap="wrap"
+              mr={isSmallerThan500 ? "" : "200px"}
             >
-              <Box w="199px" h="131px">
-                <Box
-                  w="199px"
-                  h="105px"
-                  color="#FFFFFF"
-                  fontFamily="Unbounded"
-                  fontWeight="600"
-                  fontSize="24px"
-                >
-                  Новые турникеты на всех станциях
-                </Box>
-              </Box>
               <Box
+                w={isSmallerThan1000 ? "" : "250px"}
+                color="#FFFFFF"
+                fontFamily="Unbounded"
+                fontWeight="600"
+                fontSize="24px"
+                p="13px 42px 13px 0px"
+                lineHeight="120%"
+              >
+                Новые турникеты на всех станциях
+              </Box>
+
+              <Flex
                 fontFamily="Manrope"
                 fontSize="16px"
                 color="white"
-                gap="20px"
-                justifyContent="space-between"
                 alignItems="center"
-                h="100%"
                 lineHeight="19.2px"
-                ml="30px"
+                flex="1"
+                flexWrap="wrap"
+                columnGap="20px"
+                minW={isSmallerThan1000 ? "" : "350px"}
               >
                 <Box
                   fontFamily="Manrope"
@@ -246,6 +265,7 @@ function MM2010() {
                   justifyContent="space-between"
                   alignItems="center"
                   lineHeight="19.2px"
+                  mb="20px"
                 >
                   Мы заменили турникеты на всех станциях метро и МЦК, при оплате
                   банковской картой они срабатывают более чем в 2 раза, а по
@@ -255,8 +275,14 @@ function MM2010() {
                   В скором времени появится возможность оплатить проезд и по
                   СБП.
                 </Box>
-              </Box>
-              <Image src={Turniket} mt="-38px" mr="-30px" />
+              </Flex>
+              <Image
+                src={Turniket}
+                position="absolute"
+                bottom="0px"
+                right="-25px"
+                visibility={isSmallerThan500 ? "hidden" : "visible"}
+              />
             </Flex>
           </Box>
           <Flex
@@ -279,20 +305,25 @@ function MM2010() {
         <Box mt="30px">
           <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
             <Flex mb="25px" gap="10px" alignItems="center">
-              {/* <ShieldRed /> */}
               <Image src={ShieldRed} />
               <Box color="#D34040">БЕЗОПАСНЕЕ</Box>
             </Flex>
           </Center>
-          <Flex
-            maxW="1180px"
-            maxH="175px"
+          <Center
+            minH="175px"
             borderRadius="16px"
             bg="#FFFFFF"
             shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
+            justifyContent={isSmallerThan1200 ? "center" : "space-between"}
+            flexWrap="wrap"
+            m="0 auto"
           >
-            <Image src={Station} />
-            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
+            <Image src={Station} ref={imageRef} />
+            <Box
+              p="20px"
+              borderRadius="16px"
+              w={isSmallerThan1200 ? "" : "350px"}
+            >
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="30px">
                 ХХХХХХ
               </Box>
@@ -304,7 +335,7 @@ function MM2010() {
                 станций
               </Box>
             </Box>
-          </Flex>
+          </Center>
           <Flex
             mt="30px"
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}

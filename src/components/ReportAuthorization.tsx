@@ -13,12 +13,13 @@ import {
   Grid,
   GridItem,
   Spacer,
+  Center,
 } from "@chakra-ui/react";
 import { NavLink } from "react-router-dom";
 import { motion } from "framer-motion";
 import { ChevronDownIcon } from "@chakra-ui/icons";
 function ReportAuthorization() {
-  const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
+  const [isSmallerThan550] = useMediaQuery("(max-width: 550px)");
 
   return (
     <Box pt="40px" pb="40px" borderRadius="md">
@@ -41,51 +42,53 @@ function ReportAuthorization() {
             по транспортной карте «Тройка»
           </Box>
         </Box>
-        <Box maxW="486px" pt="15px">
-          <Box
-            maxW="486px"
+        <Box mt="15px" w={isSmallerThan550 ? "90%" : "486px"}>
+          <Center
+            w={isSmallerThan550 ? "90%" : "486px"}
             m="0 auto"
             bg="rgba(244, 244, 244, 1)"
             marginBottom="10px"
-            borderRadius="30px"
+            borderRadius="8px"
             color="rgba(135, 135, 135, 1)"
           >
             <Menu>
               <Flex justifyContent="space-between">
                 <MenuButton
                   as={Button}
-                  w="486px"
+                  w={isSmallerThan550 ? "90%" : "486px"}
                   h="42px"
-                  borderRadius="30px"
-                  rightIcon={<ChevronDownIcon />}
+                  borderRadius="8px"
                 >
                   Карта Тройка № 456 876 778
                 </MenuButton>
               </Flex>
-              <MenuList borderRadius="30px" w="486px">
-                <MenuItem minH="42px" borderRadius="30px">
+              <MenuList
+                borderRadius="8px"
+                w={isSmallerThan550 ? "90%" : "486px"}
+              >
+                <MenuItem minH="42px" borderRadius="8px">
                   Карта Тройка № 456 876 778
                 </MenuItem>
-                <MenuItem minH="42px" borderRadius="30px">
+                <MenuItem minH="42px" borderRadius="8px">
                   Карта Тройка № 456 876 778
                 </MenuItem>
-                <MenuItem minH="42px" borderRadius="30px">
+                <MenuItem minH="42px" borderRadius="8px">
                   Карта Тройка № 456 876 778
                 </MenuItem>
               </MenuList>
             </Menu>
-          </Box>
-          <Button
-            bg="black"
-            color="white"
-            size="md"
-            height="42px"
-            width="486px"
-            borderRadius="30px"
-            margin="0 auto"
-          >
-            Выход из личного кабинета
-          </Button>
+          </Center>
+          <Center m="0 auto">
+            <Button
+              bg="black"
+              color="white"
+              height="42px"
+              borderRadius="30px"
+              w={isSmallerThan550 ? "90%" : "486px"}
+            >
+              Выход из личного кабинета
+            </Button>
+          </Center>
         </Box>
       </Flex>
     </Box>

@@ -80,10 +80,15 @@ function SHS2010() {
         <Center fontFamily="Manrope" fontSize="20px" mt="35px">
           с 2010 года
         </Center>
-        <Center fontFamily="Manrope" fontSize="20px">
+        <Center fontFamily="Manrope" fontSize="20px" textAlign="center">
           В МОСКВЕ ПОЯВИЛИСЬ УДОБНЫЕ СРЕДСТВА ПЕРЕДВИЖЕНИЯ:
         </Center>
-        <Center fontFamily="Unbounded" fontWeight="700" fontSize="44px">
+        <Center
+          fontFamily="Unbounded"
+          fontWeight="700"
+          fontSize="44px"
+          textAlign="center"
+        >
           ШЕРИНГОВЫЕ СЕРВИСЫ
         </Center>
         <Box mt="30px">

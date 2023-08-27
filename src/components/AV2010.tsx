@@ -54,7 +54,12 @@ function AV2010() {
       backgroundRepeat="no-repeat"
     >
       <Box maxW="1280px" mt="30px" p="30px" m="0 auto">
-        <Center fontFamily="Unbounded" fontWeight="700" fontSize="44px">
+        <Center
+          fontFamily="Unbounded"
+          fontWeight="700"
+          fontSize="44px"
+          textAlign="center"
+        >
           АВТОВОКЗАЛЫ
         </Center>
         <Box mt="30px">

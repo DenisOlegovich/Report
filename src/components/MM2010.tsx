@@ -119,8 +119,9 @@ function MM2010() {
           fontFamily="Unbounded"
           fontWeight="700"
           fontSize={isSmallerThan700 ? "26" : "44"}
+          textAlign="center"
         >
-          <Box>МОСКОВСКИЙ МЕТРОПОЛИТЕН</Box>
+          МОСКОВСКИЙ МЕТРОПОЛИТЕН
         </Center>
         <Box mt="30px">
           <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">

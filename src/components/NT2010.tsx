@@ -101,7 +101,12 @@ function NT2010() {
         <Center fontFamily="Manrope" fontSize="20px" pt="35px">
           с 2010 года
         </Center>
-        <Center fontFamily="Unbounded" fontWeight="700" fontSize="44px">
+        <Center
+          fontFamily="Unbounded"
+          fontWeight="700"
+          fontSize="44px"
+          textAlign="center"
+        >
           НАЗЕМНЫЙ ТРАНСПОРТ
         </Center>
         <Box mt="30px">

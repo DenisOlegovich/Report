@@ -59,10 +59,20 @@ function TAXI2010() {
       backgroundRepeat="no-repeat"
     >
       <Box maxW="1280px" mt="30px" p="30px" m="0 auto">
-        <Center fontFamily="Manrope" fontSize="20px" pt="35px">
+        <Center
+          fontFamily="Manrope"
+          fontSize="20px"
+          pt="35px"
+          textAlign="center"
+        >
           В 2011 ГОДУ МЫ ВНЕДРИЛИ ЕДИНЫЙ СТАНДАРТ
         </Center>
-        <Center fontFamily="Unbounded" fontWeight="700" fontSize="44px">
+        <Center
+          fontFamily="Unbounded"
+          fontWeight="700"
+          fontSize="44px"
+          textAlign="center"
+        >
           ТАКСИ
         </Center>
 

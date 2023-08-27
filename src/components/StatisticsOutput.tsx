@@ -1,29 +1,18 @@
-import React from "react";
 import {
   Container,
   Flex,
   useMediaQuery,
   Box,
-  Button,
   Image,
-  Spacer,
   Center,
 } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
-import ReportAuthorization from "./ReportAuthorization";
+
 import NavbarStatistics from "./NavbarStatistics";
 import Mark from "./Images/Mark";
 import ApLine from "./Images/ApLine.svg";
 import BcLine from "./Images/BcLine.svg";
-import Number3 from "./Images/Number3";
-import Cards from "./Images/Cards";
-import MM2010 from "./MM2010";
-import NT2010 from "./NT2010";
-import PGD2010 from "./PGD2010";
-import DD2010 from "./DD2010";
-import SHS2010 from "./SHS2010";
 import Izmailovo from "./Images/Izmailovo.svg";
+
 function StatisticsOutput() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");

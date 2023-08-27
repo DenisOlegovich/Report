@@ -1,31 +1,19 @@
-import React from "react";
 import {
   Container,
   Flex,
   useMediaQuery,
   Box,
-  Button,
   Image,
-  Spacer,
   Center,
-  UnorderedList,
-  ListItem,
 } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
-import ReportAuthorization from "./ReportAuthorization";
-import NavbarStatistics from "./NavbarStatistics";
-import Mark from "./Images/Mark";
-import ApLine from "./Images/ApLine";
-import BclLine from "./Images/BclLine";
-import Number3 from "./Images/Number3";
-import Cards from "./Images/Cards";
+
 import Velo from "./Images/Velo.svg";
 import Carsh from "./Images/Carsh.svg";
 import Scooter from "./Images/Scooter.svg";
 import Sharing from "./Images/Sharing.svg";
 import CirclesGrey from "./Images/CirclesGrey.png";
 import Card from "./Card";
+
 function SHS2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1250] = useMediaQuery("(max-width: 1250px)");

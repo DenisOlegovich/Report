@@ -12,28 +12,20 @@ import AppStore from "./Images/AppStore.svg";
 import GooglePlay from "./Images/GooglePlay.svg";
 import AppGallery from "./Images/AppGallery.svg";
 import LogoMTFooter from "./Images/LogoMTFooter.svg";
-import { ReactNode } from "react";
 function Footer() {
   const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
-  const footerRef = useRef<HTMLDivElement>(null);
-  const [fixed, setFixed] = useState(false);
+  const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
-    const observer = new IntersectionObserver(
-      ([entry]) => {
-        setFixed(!entry.isIntersecting);
-      },
-      {
-        root: null,
-        rootMargin: "0px",
-        threshold: 0,
-      }
-    );
-    if (footerRef.current) {
-      observer.observe(footerRef.current);
-    }
+    const handleResize = () => {
+      setIsFixed(document.body.scrollHeight <= window.innerHeight);
+    };
+
+    handleResize();
+    window.addEventListener("resize", handleResize);
+
     return () => {
-      observer.disconnect();
+      window.removeEventListener("resize", handleResize);
     };
   }, []);
   return (
@@ -45,7 +37,8 @@ function Footer() {
       backgroundPosition="right"
       backgroundRepeat="no-repeat"
       as="footer"
-      position={fixed ? "fixed" : "relative"}
+      className="page-footer"
+      position={isFixed ? "fixed" : "static"}
       bottom={0}
       left={0}
       marginTop="auto"

@@ -1,35 +1,13 @@
-import React, { useRef, useEffect, useCallback, useLayoutEffect } from "react";
 import {
   Container,
   Flex,
   useMediaQuery,
   Box,
-  Button,
   Image,
-  Spacer,
   Center,
   UnorderedList,
   ListItem,
-  Img,
-  Highlight,
-  Text,
-  useDimensions,
 } from "@chakra-ui/react";
-// import { Swiper, SwiperSlide } from "swiper/react";
-// import "swiper/css";
-// import "swiper/css/pagination";
-// import "swiper/css/navigation";
-// import { Keyboard, Pagination, Navigation } from "swiper/modules";
-
-import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
-import ReportAuthorization from "./ReportAuthorization";
-import NavbarStatistics from "./NavbarStatistics";
-import Mark from "./Images/Mark";
-import ApLine from "./Images/ApLine";
-import BclLine from "./Images/BclLine";
-import Number3 from "./Images/Number3";
-import Cards from "./Images/Cards";
 
 import MMLightBox from "./Images/MMLightBox.svg";
 import Turniket from "./Images/Turniket.svg";

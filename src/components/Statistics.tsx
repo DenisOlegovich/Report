@@ -1,18 +1,7 @@
-import React from "react";
-import {
-  Container,
-  Flex,
-  useMediaQuery,
-  Box,
-  Button,
-  Image,
-  Center,
-} from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Container, useMediaQuery, Box } from "@chakra-ui/react";
 import ReportAuthorization from "./ReportAuthorization";
-import NavbarStatistics from "./NavbarStatistics";
 import StatisticsOutput from "./StatisticsOutput";
+
 function Statistics() {
   const [isSmallerThan700] = useMediaQuery("(max-width: 700px)");
 

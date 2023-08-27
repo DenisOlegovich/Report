@@ -1,14 +1,4 @@
-import React from "react";
-import {
-  Container,
-  Flex,
-  useMediaQuery,
-  Box,
-  Button,
-  Image,
-} from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
+import { Container, useMediaQuery, Image } from "@chakra-ui/react";
 import Statistics from "./Statistics";
 import MainPic from "./Images/MainPic.svg";
 

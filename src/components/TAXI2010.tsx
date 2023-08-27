@@ -1,28 +1,11 @@
-import React from "react";
 import {
   Container,
   Flex,
   useMediaQuery,
   Box,
-  Button,
   Image,
-  Spacer,
   Center,
-  UnorderedList,
-  ListItem,
 } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
-import ReportAuthorization from "./ReportAuthorization";
-import NavbarStatistics from "./NavbarStatistics";
-import Mark from "./Images/Mark";
-import ApLine from "./Images/ApLine";
-import BclLine from "./Images/BclLine";
-import Number3 from "./Images/Number3";
-import Cards from "./Images/Cards";
-import ClockRed from "./Images/ClockRed.svg";
-import HeartRed from "./Images/HeartRed.svg";
-import ShieldRed from "./Images/ShieldRed.svg";
 import Taxi from "./Images/Taxi.svg";
 import CirclesYellow from "./Images/CirclesYellow.png";
 import Card from "./Card";

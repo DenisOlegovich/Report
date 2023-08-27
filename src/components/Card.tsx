@@ -1,4 +1,3 @@
-import React from "react";
 import { Box, Highlight } from "@chakra-ui/react";
 
 function Card(box: { title: string; title2: string; description: string }) {

@@ -1,23 +1,15 @@
-import React from "react";
 import {
-  Container,
   Flex,
   useMediaQuery,
   Box,
   Button,
-  Image,
   Menu,
   MenuButton,
   MenuList,
   MenuItem,
-  Grid,
-  GridItem,
-  Spacer,
   Center,
 } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
-import { ChevronDownIcon } from "@chakra-ui/icons";
+
 function ReportAuthorization() {
   const [isSmallerThan550] = useMediaQuery("(max-width: 550px)");
 

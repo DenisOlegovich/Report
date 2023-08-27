@@ -1,25 +1,14 @@
-import React from "react";
 import {
   Container,
   Flex,
   useMediaQuery,
   Box,
-  Button,
   Image,
-  Spacer,
   Center,
   UnorderedList,
   ListItem,
 } from "@chakra-ui/react";
-import { NavLink } from "react-router-dom";
-import { motion } from "framer-motion";
-import ReportAuthorization from "./ReportAuthorization";
-import NavbarStatistics from "./NavbarStatistics";
-import Mark from "./Images/Mark";
-import ApLine from "./Images/ApLine";
-import BclLine from "./Images/BclLine";
-import Number3 from "./Images/Number3";
-import Cards from "./Images/Cards";
+
 import ClockBlue from "./Images/ClockBlue.svg";
 import HeartBlue from "./Images/HeartBlue.svg";
 import ShieldBlue from "./Images/ShieldBlue.svg";
@@ -27,8 +16,8 @@ import CirclesBlue from "./Images/CirclesBlue.png";
 import Validator from "./Images/Validator.png";
 import Tram from "./Images/Tram.svg";
 import Troll from "./Images/Troll.svg";
-import { url } from "inspector";
 import Card from "./Card";
+
 function NT2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");

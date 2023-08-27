@@ -116,7 +116,7 @@ function PGD2010() {
             m="0 auto"
             w="auto"
           >
-            <Image src={Station2} />
+            <Image src={Station2} w={isSmallerThan1200 ? "100%" : "auto"} />
             <Box
               w={isSmallerThan1200 ? "" : "350px"}
               bg="white"
@@ -166,51 +166,46 @@ function PGD2010() {
           </Center>
           <Box
             maxW="1180px"
-            maxH="175px"
             borderRadius="16px"
             bg="#F6A500"
-            p="15px"
             bgImage={Train}
-            backgroundPosition="right"
+            backgroundPosition="right bottom"
             backgroundRepeat="no-repeat"
           >
-            <Flex
-            // justifyContent="space-between"
-            >
-              <Box w="199px" h="131px">
-                <Box
-                  w="157px"
-                  h="105px"
-                  color="#FFFFFF"
-                  fontFamily="Unbounded"
-                  fontWeight="600"
-                  fontSize="24px"
-                >
-                  Новый подвижной состав
-                </Box>
+            <Flex p="20px" alignItems="center" flexWrap="wrap" mr="200px">
+              <Box
+                w="250px"
+                color="#FFFFFF"
+                fontFamily="Unbounded"
+                fontWeight="600"
+                fontSize="24px"
+                p="13px 42px 13px 0px"
+                lineHeight="120%"
+              >
+                Новый подвижной состав
               </Box>
-              <Box>
-                <Flex
-                  fontFamily="Manrope"
-                  fontSize="16px"
-                  color="white"
-                  gap="20px"
-                  justifyContent="space-between"
-                  alignItems="center"
-                  h="100%"
-                  lineHeight="19.2px"
-                >
-                  <UnorderedList w="343.5px">
-                    <ListItem>плавный ход</ListItem>
-                    <ListItem>крепления для велосипедов</ListItem>
-                    <ListItem>USB-зарядки для устройств</ListItem>
-                  </UnorderedList>
-                  <UnorderedList w="343.5px">
-                    <ListItem>широкие дверные проемы</ListItem>
-                    <ListItem>сквозной проход</ListItem>
-                  </UnorderedList>
-                </Flex>
-              </Box>
+
+              <Flex
+                fontFamily="Manrope"
+                fontSize="16px"
+                color="white"
+                justifyContent="space-between"
+                alignItems="center"
+                lineHeight="19.2px"
+                flex="1"
+                flexWrap="wrap"
+                columnGap="20px"
+              >
+                <UnorderedList>
+                  <ListItem mb="12px">плавный ход</ListItem>
+                  <ListItem mb="12px">крепления для велосипедов</ListItem>
+                  <ListItem mb="12px">USB-зарядки для устройств</ListItem>
+                </UnorderedList>
+                <UnorderedList>
+                  <ListItem mb="12px">широкие дверные проемы</ListItem>
+                  <ListItem mb="12px">сквозной проход</ListItem>
+                </UnorderedList>
+              </Flex>
             </Flex>
           </Box>
           <Flex
@@ -235,7 +230,7 @@ function PGD2010() {
 
         <Box mt="30px">
           <Center fontFamily="Unbounded" fontWeight="600" fontSize="20px">
-            <Flex mb="25px" gap="10px" alignItems="center">
+            <Flex gap="10px" alignItems="center">
               <Box>СТАЛ</Box>
               <Image src={ShieldYellow} />
               <Box color="#F6A500">БЕЗОПАСНЕЕ</Box>

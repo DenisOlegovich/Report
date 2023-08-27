@@ -137,16 +137,22 @@ function DD2010() {
           </Flex>
           <Flex
             maxW="1180px"
-            h="259px"
             borderRadius="16px"
             bg="#FFFFFF"
             shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
             mt="20px"
             ml="auto"
             mr="auto"
+            flexWrap="wrap"
+            borderTopLeftRadius="30px"
           >
-            <Image src={Road} />
-            <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
+            <Image src={Road} w={isSmallerThan1200 ? "100%" : "auto"} />
+            <Box
+              w={isSmallerThan1200 ? "100%" : "360px"}
+              bg="white"
+              p="20px"
+              borderRadius="16px"
+            >
               <Box fontFamily="Unbounded" fontWeight="600" fontSize="24px">
                 Московский скоростной диаметр
               </Box>
@@ -187,22 +193,15 @@ function DD2010() {
           </Center>
           <Box
             maxW="1180px"
-            maxH="175px"
             borderRadius="16px"
             bg="#68AD45"
-            p="15px"
-            bgImage={CirclesParking}
-            backgroundPosition="right"
-            backgroundRepeat="no-repeat"
             ml="auto"
             mr="auto"
+            position="relative"
           >
-            <Flex
-            // justifyContent="space-between"
-            >
+            <Flex p="20px" alignItems="center" flexWrap="wrap" mr="200px">
               <Box
-                w="426px"
-                h="105px"
+                w="250px"
                 color="#FFFFFF"
                 fontFamily="Unbounded"
                 fontWeight="600"
@@ -213,14 +212,15 @@ function DD2010() {
                 Мобильное приложение Парковки России
               </Box>
               <Box>
-                <Center
+                <Flex
                   fontFamily="Manrope"
                   fontSize="16px"
                   color="white"
                   gap="20px"
-                  h="100%"
                   lineHeight="19.2px"
-                  flexDirection="column"
+                  flex="1"
+                  flexWrap="wrap"
+                  w={isSmallerThan1000 ? "100%" : "530px"}
                 >
                   <Box>
                     Удобное приложение для парковок «Парковки России», 95%
@@ -230,9 +230,20 @@ function DD2010() {
                     Платиновый призер AVA Digital Awards 2022 в номинации
                     «Приложение для информации»
                   </Box>
-                </Center>
+                </Flex>
               </Box>
-              <Image src={LogoParking} mt="-85px" />
+              <Image
+                src={CirclesParking}
+                position="absolute"
+                right="0px"
+                bottom="-50px"
+              />
+              <Image
+                src={LogoParking}
+                mt="-85px"
+                position="absolute"
+                right="137px"
+              />
             </Flex>
           </Box>
           <Flex
@@ -263,20 +274,18 @@ function DD2010() {
               <Box color="#68AD45">БЕЗОПАСНЕЕ</Box>
             </Flex>
           </Center>
-          <Box
+          <Center
             maxW="1180px"
-            maxH="175px"
+            minH="175px"
             borderRadius="16px"
             bg="#396522"
-            p="15px"
-            ml="auto"
-            mr="auto"
+            m="0 auto"
+            position="relative"
           >
-            <Flex
-            // justifyContent="space-between"
-            >
+            <Flex p="20px" alignItems="center" flexWrap="wrap">
               <Center
-                w="360px"
+                maxW="360px"
+                w="auto"
                 color="#FFFFFF"
                 fontFamily="Unbounded"
                 fontWeight="600"
@@ -287,16 +296,16 @@ function DD2010() {
                 Интеллектуальная транспортная система
               </Center>
 
-              <Center
+              <Flex
                 fontFamily="Manrope"
                 fontSize="16px"
                 color="white"
-                gap="20px"
-                h="100%"
+                alignItems="center"
                 lineHeight="19.2px"
-                flexDirection="column"
-                mt="auto"
-                mb="auto"
+                flex="1"
+                flexWrap="wrap"
+                rowGap="20px"
+                mr="300px"
               >
                 <Box>
                   ИТС - это единая система управления дорожным движением,
@@ -306,10 +315,15 @@ function DD2010() {
                   Система объединяет работу городских камер, камер
                   фотовидеофиксации, дорожных детекторов и светофоров
                 </Box>
-              </Center>
-              <Image src={Cameras} mt="-124px" />
+              </Flex>
+              <Image
+                src={Cameras}
+                position="absolute"
+                bottom="0px"
+                right="0px"
+              />
             </Flex>
-          </Box>
+          </Center>
           <Flex
             mt="30px"
             justifyContent={isSmallerThan1000 ? "center" : "space-around"}

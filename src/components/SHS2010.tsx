@@ -28,7 +28,7 @@ import CirclesGrey from "./Images/CirclesGrey.png";
 import Card from "./Card";
 function SHS2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
-  const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
+  const [isSmallerThan1250] = useMediaQuery("(max-width: 1250px)");
   let statistics1 = [
     {
       title: "7,2 тыс.",
@@ -87,15 +87,24 @@ function SHS2010() {
           ШЕРИНГОВЫЕ СЕРВИСЫ
         </Center>
         <Box mt="30px">
-          <Box maxW="1180px" maxH="201px" borderRadius="16px" bg="#D34040">
+          <Box maxW="1180px" minH="201px" borderRadius="16px">
             <Flex
               maxW="1180px"
               borderRadius="16px"
               bg="#FFFFFF"
               shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
+              flexWrap="wrap"
+              m="0 auto"
+              borderTopLeftRadius="30px"
+              borderTopRightRadius={isSmallerThan1250 ? "30px" : "16px"}
             >
-              <Image src={Sharing} />
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
+              <Image src={Sharing} w={isSmallerThan1250 ? "100%" : "auto"} />
+              <Box
+                w={isSmallerThan1250 ? "" : "400px"}
+                bg="white"
+                p="20px"
+                borderRadius="16px"
+              >
                 <Box fontFamily="Unbounded" fontWeight="600" fontSize="24px">
                   Сервисы аренды
                 </Box>

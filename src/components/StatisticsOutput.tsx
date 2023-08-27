@@ -112,8 +112,10 @@ function StatisticsOutput() {
         flexWrap="wrap"
         bg="white"
         borderRadius="16px"
+        m="0 auto"
+        w={isSmallerThan1200 ? "90%" : ""}
       >
-        <Image src={Izmailovo} />
+        <Image src={Izmailovo} w={isSmallerThan1200 ? "100%" : "auto"} />
 
         <Center w="532px" p="20px">
           <Box mt="auto" mb="auto">
@@ -149,7 +151,6 @@ function StatisticsOutput() {
             прямо сейчас. Чем чаще Вы пользуетесь транспортом, тем ниже
             стоимость 1 поездки.
           </Box>
-          {/* <Cards /> */}
         </Box>
 
         <Box

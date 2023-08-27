@@ -120,8 +120,9 @@ function NT2010() {
             shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
             justifyContent={isSmallerThan1200 ? "center" : "space-between"}
             flexWrap="wrap"
+            borderTopLeftRadius="30px"
           >
-            <Image src={Validator} />
+            <Image src={Validator} w={isSmallerThan1200 ? "100%" : "auto"} />
             <Box
               p="15px"
               borderRadius="16px"

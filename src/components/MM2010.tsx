@@ -1,4 +1,4 @@
-import React, { useRef, useEffect, useCallback } from "react";
+import React, { useRef, useEffect, useCallback, useLayoutEffect } from "react";
 import {
   Container,
   Flex,
@@ -46,14 +46,6 @@ function MM2010() {
   const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
   const [isSmallerThan500] = useMediaQuery("(max-width: 500px)");
 
-  const imageRef = useRef<HTMLImageElement | null>(null);
-
-  const handleImageLoad = useCallback(() => {
-    if (imageRef.current) {
-      const { clientWidth, clientHeight } = imageRef.current;
-      console.log(clientWidth);
-    }
-  }, []);
   let statistics1 = [
     {
       title: "107",
@@ -317,8 +309,9 @@ function MM2010() {
             justifyContent={isSmallerThan1200 ? "center" : "space-between"}
             flexWrap="wrap"
             m="0 auto"
+            borderTopLeftRadius="30px"
           >
-            <Image src={Station} ref={imageRef} />
+            <Image src={Station} w={isSmallerThan1200 ? "100%" : "auto"} />
             <Box
               p="20px"
               borderRadius="16px"

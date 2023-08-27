@@ -42,7 +42,7 @@ function TAXI2010() {
       title2:
         "водителей Москвы и МО зарегистрированы в системе аналитики работы такси",
       description:
-        "Благодаря обязательной регистрации в единой системе управления снижается количество ДТПв",
+        "Благодаря обязательной регистрации в единой системе управления снижается количество ДТП",
     },
     {
       title: "более 1,7 млн",
@@ -85,30 +85,33 @@ function TAXI2010() {
           ))}
         </Flex>
         <Box mt="30px">
-          <Box
+          <Center
             maxW="1180px"
-            maxH="211px"
+            minH="211px"
             borderRadius="16px"
-            bg="#D34040"
+            bg="#FFFFFF"
+            shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
             m="0 auto"
+            justifyContent={isSmallerThan1200 ? "center" : "space-between"}
+            flexWrap="wrap"
+            borderTopLeftRadius="30px"
           >
-            <Flex
+            <Image src={Taxi} w={isSmallerThan1200 ? "100%" : "auto"} />
+            <Box
+              w={isSmallerThan1200 ? "" : "350px"}
+              bg="white"
+              p="20px"
               borderRadius="16px"
-              bg="#FFFFFF"
-              shadow="0px 4px 8px 0px #0000000F,  0px 0px 4px 0px #0000000A"
             >
-              <Image src={Taxi} />
-              <Box w="100%" h="120px" bg="white" p="20px" borderRadius="16px">
-                <Box fontFamily="Unbounded" fontWeight="600" fontSize="24px">
-                  Польза во время пандемии
-                </Box>
-                <Box fontFamily="Manrope" fontSize="16px">
-                  Во время пандемии COVID-19 до 600 автомобилей такси каждый
-                  день доставляли врачей к заболевшим жителям столицы
-                </Box>
+              <Box fontFamily="Unbounded" fontWeight="600" fontSize="24px">
+                Польза во время пандемии
               </Box>
-            </Flex>
-          </Box>
+              <Box fontFamily="Manrope" fontSize="16px">
+                Во время пандемии COVID-19 до 600 автомобилей такси каждый день
+                доставляли врачей к заболевшим жителям столицы
+              </Box>
+            </Box>
+          </Center>
         </Box>
       </Box>
     </Container>

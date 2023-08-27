@@ -24,6 +24,7 @@ export const theme = extendBaseTheme({
     Modal: defaultTheme.components.Modal,
     Select: defaultTheme.components.Select,
     Menu: defaultTheme.components.Menu,
+    Alert: defaultTheme.components.Alert,
   },
 });
 

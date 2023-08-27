@@ -17,6 +17,7 @@ import ShieldRed from "./Images/ShieldRed.svg";
 import CirclesRed from "./Images/CirclesRed.png";
 import Station from "./Images/Station.svg";
 import Card from "./Card";
+import DelayedAlert from "./test";
 
 function MM2010() {
   const [isSmallerThan1000] = useMediaQuery("(max-width: 1000px)");
@@ -89,6 +90,7 @@ function MM2010() {
       backgroundSize="cover"
       backgroundRepeat="no-repeat"
     >
+      {/* <DelayedAlert /> */}
       <Box maxW="1280px" mt="30px" p="30px" m="0 auto">
         <Center fontFamily="Manrope" fontSize="20px" pt="35px">
           с 2010 года

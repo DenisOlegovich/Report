@@ -13,7 +13,7 @@ import GooglePlay from "./Images/GooglePlay.svg";
 import AppGallery from "./Images/AppGallery.svg";
 import LogoMTFooter from "./Images/LogoMTFooter.svg";
 function Footer() {
-  const [isSmallerThan800] = useMediaQuery("(max-width: 800px)");
+  const [isSmallerThan1200] = useMediaQuery("(max-width: 1200px)");
   const [isFixed, setIsFixed] = useState(false);
 
   useEffect(() => {
@@ -34,11 +34,12 @@ function Footer() {
       w="100%"
       h="391px"
       bgImage={Trains}
-      backgroundPosition="right"
+      bgSize={isSmallerThan1200 ? "50%" : ""}
+      backgroundPosition="right bottom"
       backgroundRepeat="no-repeat"
       as="footer"
       className="page-footer"
-      position={isFixed ? "fixed" : "static"}
+      position="relative"
       bottom={0}
       left={0}
       marginTop="auto"

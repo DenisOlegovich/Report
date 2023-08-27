@@ -32,7 +32,7 @@ function Footer() {
     <Container
       mt="50px"
       w="100%"
-      h="391px"
+      minH="391px"
       bgImage={Trains}
       bgSize={isSmallerThan1200 ? "50%" : ""}
       backgroundPosition="right bottom"
@@ -45,7 +45,7 @@ function Footer() {
       marginTop="auto"
       p="50px 70px"
     >
-      <Box position="relative" h="282px">
+      <Box position="relative" minH="282px">
         <Box maxW="591px">
           <Box
             fontFamily="Unbounded"
@@ -68,7 +68,7 @@ function Footer() {
           </Flex>
         </Box>
 
-        <Image src={LogoMTFooter} position="absolute" bottom="0px" />
+        <Image src={LogoMTFooter} mt="50px" />
       </Box>
     </Container>
   );
